@@ -1,0 +1,7 @@
+{
+  "diagnosis": "PASS: identifies stale cleanup removing newer flight",
+  "semantic_tests": "7/7 PASS",
+  "finish": "stop",
+  "normalization": "Added no logic; applied exact two-line semantic edit from diff fragment (missing unified diff file/hunk headers).",
+  "regression_scenario": "Identifies needed interleaving but prose assertion vague; executable predefined tests provide enforcement."
+}

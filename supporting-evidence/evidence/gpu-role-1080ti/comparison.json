@@ -1,0 +1,103 @@
+{
+  "ti-primary": {
+    "generated_tokens": 1437,
+    "decode_loop_seconds": 52.818243,
+    "tokens_per_second": 27.206508932907894,
+    "send_to_complete_bracket_seconds": [
+      53.39,
+      54.18
+    ],
+    "prompt_seconds": 1.03,
+    "expert_stage_ms_per_token": 20.49,
+    "gpu_chain_wait_ms_per_token": 12.11,
+    "expert_slots": [
+      1885,
+      2057
+    ],
+    "profile": {
+      "wall_s": 52.818243,
+      "prompt_tokens": 37,
+      "completion_tokens": 1437,
+      "expert_disk_s": 0.0,
+      "expert_wait_s": 0.0,
+      "expert_matmul_s": 29.443242,
+      "attention_s": 0.0,
+      "lm_head_s": 0.000222,
+      "forwards": 1438
+    },
+    "resources": {
+      "profile": "ti-primary",
+      "active_samples": 68,
+      "peak_engine_rss_gib": 40.03,
+      "min_system_available_gib": 31.14,
+      "gpus": {
+        "0": {
+          "name": "NVIDIA GeForce RTX 4060",
+          "peak_total_mib": 6136.0,
+          "peak_util_pct": 10.0,
+          "max_temp_c": 50.0,
+          "max_power_w": null
+        },
+        "1": {
+          "name": "NVIDIA GeForce GTX 1080 Ti",
+          "peak_total_mib": 10367.0,
+          "peak_util_pct": 65.0,
+          "max_temp_c": 64.0,
+          "max_power_w": 141.54
+        }
+      }
+    },
+    "finish": "stop"
+  },
+  "4060-primary": {
+    "generated_tokens": 1819,
+    "decode_loop_seconds": 59.508387,
+    "tokens_per_second": 30.56711989185659,
+    "send_to_complete_bracket_seconds": [
+      60.14,
+      60.94
+    ],
+    "prompt_seconds": 1.077,
+    "expert_stage_ms_per_token": 21.74,
+    "gpu_chain_wait_ms_per_token": 6.14,
+    "expert_slots": [
+      1377,
+      2570
+    ],
+    "profile": {
+      "wall_s": 59.508387,
+      "prompt_tokens": 37,
+      "completion_tokens": 1819,
+      "expert_disk_s": 0.0,
+      "expert_wait_s": 0.0,
+      "expert_matmul_s": 39.536326,
+      "attention_s": 0.0,
+      "lm_head_s": 0.000277,
+      "forwards": 1820
+    },
+    "resources": {
+      "profile": "4060-primary",
+      "active_samples": 76,
+      "peak_engine_rss_gib": 40.14,
+      "min_system_available_gib": 31.32,
+      "gpus": {
+        "0": {
+          "name": "NVIDIA GeForce RTX 4060",
+          "peak_total_mib": 7004.0,
+          "peak_util_pct": 51.0,
+          "max_temp_c": 58.0,
+          "max_power_w": null
+        },
+        "1": {
+          "name": "NVIDIA GeForce GTX 1080 Ti",
+          "peak_total_mib": 9531.0,
+          "peak_util_pct": 30.0,
+          "max_temp_c": 55.0,
+          "max_power_w": 75.68
+        }
+      }
+    },
+    "finish": "stop"
+  },
+  "ti_speed_change_percent": -10.994202171608581
+}

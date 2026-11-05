@@ -1,0 +1,128 @@
+[
+  {
+    "profile": "cuda-baseline",
+    "unix": 1793820606.968,
+    "max_tokens": 256,
+    "temperature": 0,
+    "last_sample": {
+      "state": "writing",
+      "elapsed_s": 19.316,
+      "read_s": 5.792,
+      "prompt_tokens": 37,
+      "tokens": 236,
+      "forwards": 0,
+      "tok_s": 17.41,
+      "tok_s_now": 17.71
+    },
+    "completion_lower_s": 19.38,
+    "completion_upper_s": 21.45,
+    "max_rss_gib": 41.03,
+    "min_available_gib": 24.78,
+    "gpu_last_active": "0, NVIDIA GeForce RTX 4060, 6995, 98, 43, [N/A]\n1, NVIDIA GeForce GTX 1070, 1094, 19, 51, 31.27"
+  },
+  {
+    "profile": "cuda-dual",
+    "unix": 1793820703.14,
+    "max_tokens": 256,
+    "temperature": 0,
+    "last_sample": {
+      "state": "writing",
+      "elapsed_s": 14.421,
+      "read_s": 1.778,
+      "prompt_tokens": 37,
+      "tokens": 226,
+      "forwards": 0,
+      "tok_s": 17.811,
+      "tok_s_now": 16.572
+    },
+    "completion_lower_s": 14.53,
+    "completion_upper_s": 16.57,
+    "max_rss_gib": 39.92,
+    "min_available_gib": 28.0,
+    "gpu_last_active": "0, NVIDIA GeForce RTX 4060, 5879, 21, 45, [N/A]\n1, NVIDIA GeForce GTX 1070, 6367, 19, 53, 39.17"
+  },
+  {
+    "profile": "vulkan",
+    "unix": 1793820888.631,
+    "max_tokens": 256,
+    "temperature": 0,
+    "last_sample": {
+      "state": "writing",
+      "elapsed_s": 22.689,
+      "read_s": 6.751,
+      "prompt_tokens": 37,
+      "tokens": 249,
+      "forwards": 0,
+      "tok_s": 15.613,
+      "tok_s_now": 16.946
+    },
+    "completion_lower_s": 22.75,
+    "completion_upper_s": 24.79,
+    "max_rss_gib": 40.34,
+    "min_available_gib": 27.87,
+    "gpu_last_active": "0, NVIDIA GeForce RTX 4060, 5050, 27, 45, [N/A]\n1, NVIDIA GeForce GTX 1070, 1168, 18, 51, 32.23"
+  },
+  {
+    "profile": "vulkan-dual",
+    "unix": 1793821011.066,
+    "max_tokens": 256,
+    "temperature": 0,
+    "last_sample": {
+      "state": "writing",
+      "elapsed_s": 16.785,
+      "read_s": 4.74,
+      "prompt_tokens": 37,
+      "tokens": 252,
+      "forwards": 0,
+      "tok_s": 20.862,
+      "tok_s_now": 20.297
+    },
+    "completion_lower_s": 16.84,
+    "completion_upper_s": 18.88,
+    "max_rss_gib": 32.94,
+    "min_available_gib": 35.27,
+    "gpu_last_active": "0, NVIDIA GeForce RTX 4060, 5193, 40, 48, [N/A]\n1, NVIDIA GeForce GTX 1070, 7035, 55, 56, 63.41"
+  },
+  {
+    "profile": "cuda-dual-tuned",
+    "unix": 1793821102.555,
+    "max_tokens": 256,
+    "temperature": 0,
+    "last_sample": {
+      "state": "writing",
+      "elapsed_s": 17.033,
+      "read_s": 1.836,
+      "prompt_tokens": 37,
+      "tokens": 254,
+      "forwards": 0,
+      "tok_s": 16.655,
+      "tok_s_now": 17.732
+    },
+    "completion_lower_s": 17.08,
+    "completion_upper_s": 19.12,
+    "max_rss_gib": 39.92,
+    "min_available_gib": 28.87,
+    "gpu_last_active": "0, NVIDIA GeForce RTX 4060, 5881, 20, 48, [N/A]\n1, NVIDIA GeForce GTX 1070, 6361, 22, 52, 38.18"
+  },
+  {
+    "profile": "vulkan-dual-full",
+    "unix": 1793821258.194,
+    "max_tokens": 6144,
+    "temperature": 1,
+    "last_sample": {
+      "state": "writing",
+      "elapsed_s": 76.889,
+      "read_s": 1.046,
+      "prompt_tokens": 37,
+      "tokens": 1342,
+      "forwards": 0,
+      "tok_s": 17.691,
+      "tok_s_now": 18.664
+    },
+    "completion_lower_s": 76.94,
+    "completion_upper_s": 78.98,
+    "max_rss_gib": 32.97,
+    "min_available_gib": 35.9,
+    "gpu_last_active": "0, NVIDIA GeForce RTX 4060, 5193, 31, 53, [N/A]\n1, NVIDIA GeForce GTX 1070, 6996, 38, 56, 61.26"
+  }
+]

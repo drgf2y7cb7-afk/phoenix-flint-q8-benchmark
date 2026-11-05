@@ -1,0 +1,1599 @@
+{
+  "status": "PASS",
+  "checks": 398,
+  "run_rows": 40,
+  "checks_detail": [
+    {
+      "check": "early-backends-1070/cuda-baseline last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "early-backends-1070/cuda-baseline sampled token count",
+      "pass": true
+    },
+    {
+      "check": "early-backends-1070/cuda-baseline completion bracket",
+      "pass": true
+    },
+    {
+      "check": "early-backends-1070/cuda-dual last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "early-backends-1070/cuda-dual sampled token count",
+      "pass": true
+    },
+    {
+      "check": "early-backends-1070/cuda-dual completion bracket",
+      "pass": true
+    },
+    {
+      "check": "early-backends-1070/vulkan last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "early-backends-1070/vulkan sampled token count",
+      "pass": true
+    },
+    {
+      "check": "early-backends-1070/vulkan completion bracket",
+      "pass": true
+    },
+    {
+      "check": "early-backends-1070/vulkan-dual last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "early-backends-1070/vulkan-dual sampled token count",
+      "pass": true
+    },
+    {
+      "check": "early-backends-1070/vulkan-dual completion bracket",
+      "pass": true
+    },
+    {
+      "check": "early-backends-1070/cuda-dual-tuned last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "early-backends-1070/cuda-dual-tuned sampled token count",
+      "pass": true
+    },
+    {
+      "check": "early-backends-1070/cuda-dual-tuned completion bracket",
+      "pass": true
+    },
+    {
+      "check": "early-backends-1070/vulkan-dual-full last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "early-backends-1070/vulkan-dual-full sampled token count",
+      "pass": true
+    },
+    {
+      "check": "early-backends-1070/vulkan-dual-full completion bracket",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/t8-v3-r1 last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/t8-v3-r1 sampled token count",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/t8-v3-r1 completion bracket",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/t4-v3-r1 last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/t4-v3-r1 sampled token count",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/t4-v3-r1 completion bracket",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/t6-v3-r1 last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/t6-v3-r1 sampled token count",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/t6-v3-r1 completion bracket",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/t8-v3-r2 last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/t8-v3-r2 sampled token count",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/t8-v3-r2 completion bracket",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/t8-v35-r1 last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/t8-v35-r1 sampled token count",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/t8-v35-r1 completion bracket",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/t8-v4-r1 last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/t8-v4-r1 sampled token count",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/t8-v4-r1 completion bracket",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/c8-v5-r1 last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/c8-v5-r1 sampled token count",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/c8-v5-r1 completion bracket",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/c4-v5-r1 last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/c4-v5-r1 sampled token count",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/c4-v5-r1 completion bracket",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/c6-v5-r1 last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/c6-v5-r1 sampled token count",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/c6-v5-r1 completion bracket",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/c8-v5-r2 last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/c8-v5-r2 sampled token count",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/c8-v5-r2 completion bracket",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/c8-v55-r1 last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/c8-v55-r1 sampled token count",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/c8-v55-r1 completion bracket",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/c8-v55-r2 last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/c8-v55-r2 sampled token count",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/c8-v55-r2 completion bracket",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/cuda-final-full last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/cuda-final-full sampled token count",
+      "pass": true
+    },
+    {
+      "check": "thread-cache-1070/cuda-final-full completion bracket",
+      "pass": true
+    },
+    {
+      "check": "split-8020-1070/vulkan-8020 last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "split-8020-1070/vulkan-8020 sampled token count",
+      "pass": true
+    },
+    {
+      "check": "split-8020-1070/vulkan-8020 completion bracket",
+      "pass": true
+    },
+    {
+      "check": "split-8020-1070/cuda-8020 last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "split-8020-1070/cuda-8020 sampled token count",
+      "pass": true
+    },
+    {
+      "check": "split-8020-1070/cuda-8020 completion bracket",
+      "pass": true
+    },
+    {
+      "check": "initial-1080ti/cuda-matched last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "initial-1080ti/cuda-matched sampled token count",
+      "pass": true
+    },
+    {
+      "check": "initial-1080ti/cuda-matched completion bracket",
+      "pass": true
+    },
+    {
+      "check": "tuned-1080ti/cuda-matched last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "tuned-1080ti/cuda-matched sampled token count",
+      "pass": true
+    },
+    {
+      "check": "tuned-1080ti/cuda-matched completion bracket",
+      "pass": true
+    },
+    {
+      "check": "tuned-1080ti/cuda-clean last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "tuned-1080ti/cuda-clean sampled token count",
+      "pass": true
+    },
+    {
+      "check": "tuned-1080ti/cuda-clean completion bracket",
+      "pass": true
+    },
+    {
+      "check": "tuned-1080ti/cuda-auto last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "tuned-1080ti/cuda-auto sampled token count",
+      "pass": true
+    },
+    {
+      "check": "tuned-1080ti/cuda-auto completion bracket",
+      "pass": true
+    },
+    {
+      "check": "tuned-1080ti/vulkan-matched last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "tuned-1080ti/vulkan-matched sampled token count",
+      "pass": true
+    },
+    {
+      "check": "tuned-1080ti/vulkan-matched completion bracket",
+      "pass": true
+    },
+    {
+      "check": "tuned-1080ti/vulkan-expanded last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "tuned-1080ti/vulkan-expanded sampled token count",
+      "pass": true
+    },
+    {
+      "check": "tuned-1080ti/vulkan-expanded completion bracket",
+      "pass": true
+    },
+    {
+      "check": "tuned-1080ti/cuda-production last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "tuned-1080ti/cuda-production sampled token count",
+      "pass": true
+    },
+    {
+      "check": "tuned-1080ti/cuda-production completion bracket",
+      "pass": true
+    },
+    {
+      "check": "prefill-cache-1080ti/cache-off last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "prefill-cache-1080ti/cache-off sampled token count",
+      "pass": true
+    },
+    {
+      "check": "prefill-cache-1080ti/cache-off completion bracket",
+      "pass": true
+    },
+    {
+      "check": "prefill-cache-1080ti/cache-on last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "prefill-cache-1080ti/cache-on sampled token count",
+      "pass": true
+    },
+    {
+      "check": "prefill-cache-1080ti/cache-on completion bracket",
+      "pass": true
+    },
+    {
+      "check": "prefill-cache-1080ti/cache-off-zero last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "prefill-cache-1080ti/cache-off-zero sampled token count",
+      "pass": true
+    },
+    {
+      "check": "prefill-cache-1080ti/cache-off-zero completion bracket",
+      "pass": true
+    },
+    {
+      "check": "gpu-role-1080ti/ti-primary last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "gpu-role-1080ti/ti-primary sampled token count",
+      "pass": true
+    },
+    {
+      "check": "gpu-role-1080ti/ti-primary completion bracket",
+      "pass": true
+    },
+    {
+      "check": "gpu-role-1080ti/4060-primary last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "gpu-role-1080ti/4060-primary sampled token count",
+      "pass": true
+    },
+    {
+      "check": "gpu-role-1080ti/4060-primary completion bracket",
+      "pass": true
+    },
+    {
+      "check": "dual-gpu-coding/q8 last sampled decode rate",
+      "pass": true
+    },
+    {
+      "check": "dual-gpu-coding/q8 sampled token count",
+      "pass": true
+    },
+    {
+      "check": "dual-gpu-coding/q8 completion bracket",
+      "pass": true
+    },
+    {
+      "check": "quality/new-cold-object0 rate",
+      "pass": true
+    },
+    {
+      "check": "quality/insulation0 rate",
+      "pass": true
+    },
+    {
+      "check": "quality/insulation1 rate",
+      "pass": true
+    },
+    {
+      "check": "quality/backup-recovery0 rate",
+      "pass": true
+    },
+    {
+      "check": "quality/backup-recovery1 rate",
+      "pass": true
+    },
+    {
+      "check": "single GPU code rate and token count in raw samples",
+      "pass": true
+    },
+    {
+      "check": "full baseline repeated final answer and reasoning match",
+      "pass": true
+    },
+    {
+      "check": "prefill-cache-1080ti/cache-off-zero recorded completed rate",
+      "pass": true
+    },
+    {
+      "check": "prefill-cache-1080ti/cache-on recorded completed rate",
+      "pass": true
+    },
+    {
+      "check": "gpu-role-1080ti/4060-primary recorded completed rate",
+      "pass": true
+    },
+    {
+      "check": "gpu-role-1080ti/ti-primary recorded completed rate",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/buggy-test-results.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/coding-result.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/completed-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/final-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/final-resource-samples.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/final-startup-console.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/final-startup.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/first-attempt-export.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/flint-test-results.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/grading-key.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/model-proposed-diff.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/plan-final.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/plan.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/pre-submission-sha256.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/prompt.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/resource-samples.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/results.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/startup-console.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/startup-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/single-gpu-coding/startup.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/actual-settings.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/assessment.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/backup-recovery-0-prompt.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/backup-recovery-1-prompt.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/cooler-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/cooler-visible.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/final-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/frozen-plan.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/frozen-plan.sha256",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/grading-sources.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/hardware-followup.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/health-samples.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/insulation-0-prompt.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/insulation-1-prompt.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/insulation-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/insulation-turn0-visible.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/insulation-visible.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/metrics.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/new-cold-object-0-prompt.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/recovery-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/recovery-turn0-visible.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/recovery-visible.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/quality-cases/send-events.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/actual-settings.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/assessment.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/build-dual.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/build-vulkan.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/conversation-checks.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/cuda-baseline-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/cuda-dual-config.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/cuda-dual-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/cuda-dual-tuned-config.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/cuda-dual-tuned-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/cuda-dual-tuned.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/cuda-dual.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/final-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/metrics.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/protocol.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/samples.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/sends.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/vulkan-config.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/vulkan-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/vulkan-device-order-diagnostic.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/vulkan-dual-config.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/vulkan-dual-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/vulkan-dual-full-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/vulkan-dual-full.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/vulkan-dual.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/early-backends-1070/vulkan.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/accuracy-assessment.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/c4-v5-r1-config.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/c4-v5-r1-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/c4-v5-r1.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/c6-v5-r1-config.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/c6-v5-r1-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/c6-v5-r1.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/c8-v5-r1-config.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/c8-v5-r1-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/c8-v5-r1.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/c8-v5-r2-config.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/c8-v5-r2-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/c8-v5-r2.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/c8-v55-r1-config.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/c8-v55-r1-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/c8-v55-r1.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/c8-v55-r2-config.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/c8-v55-r2-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/c8-v55-r2.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/cuda-extension.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/cuda-final-full-config.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/cuda-final-full-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/final-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/frozen-cuda-heat.bin",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/frozen-expert-usage",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/frozen-seed-sha256.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/metrics.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/protocol.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/resource-peaks.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/samples.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/sends.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/startup-notes.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/t4-v3-r1-config.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/t4-v3-r1-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/t4-v3-r1.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/t6-v3-r1-config.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/t6-v3-r1-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/t6-v3-r1.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/t8-v3-r1-config.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/t8-v3-r1-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/t8-v3-r1.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/t8-v3-r2-config.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/t8-v3-r2-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/t8-v3-r2.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/t8-v35-r1-config.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/t8-v35-r1-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/t8-v35-r1.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/t8-v4-r1-config.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/t8-v4-r1-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/t8-v4-r1.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/configuration-records/c4-v5-r1.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/configuration-records/c6-v5-r1.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/configuration-records/c8-v5-r1.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/configuration-records/c8-v5-r2.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/configuration-records/c8-v55-r1.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/configuration-records/t4-v3-r1.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/configuration-records/t6-v3-r1.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/configuration-records/t8-v3-r1.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/configuration-records/t8-v3-r2.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/configuration-records/t8-v35-r1.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/thread-cache-1070/configuration-records/t8-v4-r1.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/before-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/cuda-8020-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/cuda-8020.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/cuda-final-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/cuda-runtime.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/cuda-test-cap.patch",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/frozen-cuda-heat.bin",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/frozen-expert-usage",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/metrics.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/protocol.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/resource-peaks.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/restored-cuda.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/restored-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/restored-runtime.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/samples.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/sends.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/vulkan-8020-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/vulkan-8020.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/vulkan-final-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/split-8020-1070/vulkan-runtime.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/cuda-loaded-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/cuda-matched-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/cuda-matched-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/cuda-matched.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/cuda-production.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/cuda-runtime.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/final-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/frozen-cuda-heat.bin",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/frozen-expert-usage",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/gpu-before.csv",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/metrics.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/protocol.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/samples.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/sends.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/vulkan-loaded-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/vulkan-matched.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/vulkan-startup-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/configuration-records/cuda-auto.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/configuration-records/cuda-matched.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/configuration-records/vulkan-expanded.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/initial-1080ti/configuration-records/vulkan-matched.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/accuracy-observation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/cuda-auto-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/cuda-auto-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/cuda-auto.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/cuda-clean-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/cuda-clean-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/cuda-clean.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/cuda-matched-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/cuda-matched-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/cuda-matched.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/cuda-production-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/cuda-production-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/cuda-production.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/final-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/metrics.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/production-runtime.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/protocol.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/resource-report.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/resources.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/samples.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/sends.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/vulkan-expanded-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/vulkan-expanded-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/vulkan-expanded-runtime.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/vulkan-expanded.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/vulkan-matched-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/vulkan-matched-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/vulkan-matched.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/configuration-records/cuda-auto.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/configuration-records/cuda-clean.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/configuration-records/cuda-matched.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/configuration-records/vulkan-expanded.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/tuned-1080ti/configuration-records/vulkan-matched.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/cache-off-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/cache-off-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/cache-off-runtime.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/cache-off-zero-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/cache-off-zero-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/cache-off-zero-profile.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/cache-off-zero-runtime.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/cache-off-zero.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/cache-off.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/cache-on-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/cache-on-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/cache-on-profile.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/cache-on-runtime.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/cache-on.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/comparison.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/metrics.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/production-restored.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/protocol.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/resources.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/restored-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/restored-runtime.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/samples.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/seed-sha256.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/sends.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/configuration-records/cache-off-zero.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/configuration-records/cache-off.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/configuration-records/cache-on.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/4060-primary-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/4060-primary-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/4060-primary-profile.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/4060-primary-runtime.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/4060-primary-start-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/4060-primary-start-profile.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/4060-primary-start-runtime.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/4060-primary.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/comparison.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/metrics.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/prior-control-comparison.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/production-restored-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/production-restored-profile.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/production-restored-runtime.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/production-restored.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/protocol.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/resources.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/runtime-differences.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/samples.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/seed-sha256.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/sends.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/ti-primary-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/ti-primary-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/ti-primary-profile.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/ti-primary-runtime.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/ti-primary-start-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/ti-primary-start-profile.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/ti-primary-start-runtime.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/ti-primary.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/configuration-records/4060-primary.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/gpu-role-1080ti/configuration-records/ti-primary.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/dual-gpu-coding/buggy-test-results.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/dual-gpu-coding/grading-key.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/dual-gpu-coding/metrics.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/dual-gpu-coding/prompt.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/dual-gpu-coding/protocol.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/dual-gpu-coding/q8-conversation.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/dual-gpu-coding/q8-grade.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/dual-gpu-coding/q8-health.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/dual-gpu-coding/q8-profile.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/dual-gpu-coding/q8-proposed-diff.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/dual-gpu-coding/q8-runtime.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/dual-gpu-coding/q8-test-results.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/dual-gpu-coding/q8.log",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/dual-gpu-coding/resources.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/dual-gpu-coding/samples.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/dual-gpu-coding/send-times.jsonl",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/model-validation/colibri-header-check.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/model-validation/status.json",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/prefill-cache-1080ti/seed-heat.bin",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/software/installation-record.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/software/start-colibri-flint-q8.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/software/start-colibri-flint-q8-dual.sh.txt",
+      "pass": true
+    },
+    {
+      "check": "SHA256 evidence/software/start-colibri-flint-q8-cuda-dual.sh.txt",
+      "pass": true
+    }
+  ]
+}

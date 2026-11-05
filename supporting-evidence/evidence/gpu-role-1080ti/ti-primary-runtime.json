@@ -1,0 +1,23 @@
+[
+  {
+    "pid": 122516,
+    "args": [
+      "<COLIBRI_LOCAL>/bin/qwen36-cuda-sm61-sm89",
+      "256",
+      ""
+    ],
+    "config": {
+      "HEAT_FILE": "<COLIBRI_LOCAL>/flint-gpu-role-20261104-135808/state-ti-primary/expert-heat.bin",
+      "CUDA_EXPERT_GB": "auto",
+      "COLI_PLACE": "lmhead=1,attnproj=1,shexp=1,experts=all",
+      "COLI_CUDA_CHAIN_MOE": "0",
+      "COLI_TIMERS": "1",
+      "COLI_SETUP_HOME": "<COLIBRI_LOCAL>/flint-gpu-role-20261104-135808/state-ti-primary",
+      "COLI_NO_OMP_TUNE": "1",
+      "CUDA_VISIBLE_DEVICES": "<GPU_ID>,<GPU_ID>",
+      "QT_PREFILL_REPLAN": "0",
+      "QT_PREFILL_REPLAN_MAX": "24",
+      "OMP_NUM_THREADS": "8"
+    }
+  }
+]

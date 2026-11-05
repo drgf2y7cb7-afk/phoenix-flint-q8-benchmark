@@ -1,0 +1,46 @@
+[
+  {
+    "profile": "ti-primary",
+    "active_samples": 68,
+    "peak_engine_rss_gib": 40.03,
+    "min_system_available_gib": 31.14,
+    "gpus": {
+      "0": {
+        "name": "NVIDIA GeForce RTX 4060",
+        "peak_total_mib": 6136.0,
+        "peak_util_pct": 10.0,
+        "max_temp_c": 50.0,
+        "max_power_w": null
+      },
+      "1": {
+        "name": "NVIDIA GeForce GTX 1080 Ti",
+        "peak_total_mib": 10367.0,
+        "peak_util_pct": 65.0,
+        "max_temp_c": 64.0,
+        "max_power_w": 141.54
+      }
+    }
+  },
+  {
+    "profile": "4060-primary",
+    "active_samples": 76,
+    "peak_engine_rss_gib": 40.14,
+    "min_system_available_gib": 31.32,
+    "gpus": {
+      "0": {
+        "name": "NVIDIA GeForce RTX 4060",
+        "peak_total_mib": 7004.0,
+        "peak_util_pct": 51.0,
+        "max_temp_c": 58.0,
+        "max_power_w": null
+      },
+      "1": {
+        "name": "NVIDIA GeForce GTX 1080 Ti",
+        "peak_total_mib": 9531.0,
+        "peak_util_pct": 30.0,
+        "max_temp_c": 55.0,
+        "max_power_w": 75.68
+      }
+    }
+  }
+]

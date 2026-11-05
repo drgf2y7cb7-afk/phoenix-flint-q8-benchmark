@@ -1,0 +1,23 @@
+{
+  "created": "2026-11-04T11:28:29.384064-08:00",
+  "prompt": "GPU activity diagnostic 2: Explain how insulation slows heat transfer, using general physical principles in about 250 words. This is a hardware timing check. Do not use tools.",
+  "screen": {
+    "max_tokens": 256,
+    "temperature": 0,
+    "context": 8192
+  },
+  "full": {
+    "max_tokens": 6144,
+    "temperature": 1,
+    "context": 8192
+  },
+  "grading": "Accurate insulation physics; no misleading thermal interface example. Screen truncation intentional. Full answer must finish normally.",
+  "profiles": [
+    "CUDA4060 baseline",
+    "CUDA4060 CPU scheduling",
+    "CUDA dual 4060+1070",
+    "Vulkan4060",
+    "Vulkan dual if supported"
+  ],
+  "original_launcher_sha256": "eb86642aa9310a219952a1dbaae3c42a7314d95b346f73f8ef0122021be43632"
+}

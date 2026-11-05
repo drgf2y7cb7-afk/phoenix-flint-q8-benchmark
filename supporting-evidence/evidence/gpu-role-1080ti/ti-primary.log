@@ -1,0 +1,262 @@
+Flint Q8 — <LOCAL_ENDPOINT>/ — CUDA, RTX 4060 + GTX 1080 Ti, 8 CPU threads
+dashboard: <LOCAL_ENDPOINT>/  (opens automatically when the engine is ready)
+[gateway] qwen36 engine, flint chat template (from the checkpoint's chat_template.jinja)
+[gguf] <MODEL_DIR>/flint-Q8_0.gguf: 1 file(s), 779 tensors, read in place (native ggml types, no conversion)
+== qwen36 Phase-2 engine | cache=256/layer bits=4 ctx=8192 pilot=0 wide=1 hot=0 smooth=0.30 conf=0.92 ==
+[tok] Flint's pre-tokenizer (digits by three, CJK runs, o200k letters)
+[tok] loaded 150000 pieces (max id 150143) from <MODEL_DIR>/colibri/tokenizer.json
+[gguf] flint: 35 sliding-window layers of 513 rows, 14 without RoPE, 2 dense in front (MLP 6144), sigmoid routing, a sink per head
+[gguf] flint: 49 layers (all attention), hidden 2048, 256 experts top-6, inter 512, vocab 150144
+[gguf] experts: layer 2 gate Q8_0 up Q8_0 down Q8_0, 3.19 MB per expert at most; held interleaved by 16 for the CPU (Q36_ILV16=0 keeps the rows)
+resident weights loaded in 1.1s | RSS after load: 2.13 GB
+[qwen36] expert format on disk: GGUF native ggml types (the CUDA and Vulkan tiers hold the file's blocks)
+[place] COLI_PLACE=lmhead=1,attnproj=1,shexp=1,experts=all
+[CUDA] device 0: NVIDIA GeForce RTX 4060, 8.2 GB VRAM, sm_89
+[CUDA] device 1: NVIDIA GeForce GTX 1080 Ti, 11.7 GB VRAM, sm_61
+[qtier] dev 0: 7.5 GB free, allowance 5.9 GB
+[qtier] dev 1: 9.6 GB free, allowance 8.0 GB
+[qtier] HEAT_FILE loaded: <COLIBRI_LOCAL>/flint-gpu-role-20261104-135808/state-ti-primary/expert-heat.bin
+[place] experts=all: the experts stay on all 2 cards, the reserved ones included
+[qtier] dev 0: budget 5.89 GB for experts (~1885 experts)
+[qtier] dev 1: budget 6.42 GB for experts (~2057 experts) after trunk
+[qtier] dev 0: the GGUF experts' arena, 1885 slots of 3.20 MB (5.88 GB)
+[qtier] dev 1: the GGUF experts' arena, 2057 slots of 3.20 MB (6.42 GB)
+[qtier] CUDA VRAM expert tier active: 2 device(s), 3.20 MB/expert
+[CUDA] mode: routed experts (qwen36 VRAM tier)
+[gpu] MoE experts -> CUDA VRAM tier
+[lmh] lm_head [150144 x 2048] the GGUF's blocks resident on CUDA dev 1 (0.30 GB)
+[dense] 343 trunk matrices on GPU (0 dnout, 196 attnproj, 147 shexp; 1.28 GB VRAM)
+[chain] qwen36: 49 layers on CUDA device 1 (49 attention), lm_head too; 0.8 MiB of parameters, 94.0 MiB of router, b|a and gate rows, 0 MB of DeltaNet state
+[qtier] warmstart (parallel): all 12544 experts in RAM (int8 container: all experts keep their weights in RAM), 3942 in VRAM -- 15.3 s
+[gateway] input modalities: text (the engine loaded no vision tower; a picture gets a 400)
+OpenAI-compatible API listening on <LOCAL_ENDPOINT>/v1
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - refused: per-address cap 8
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /profile HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "POST /v1/chat/completions HTTP/1.1" 200 -
+[qwen36] KV: 35 sliding-window layers keep a ring of 769 rows (window 513, 256 spare), not 6400: 0.05 GiB of their cache instead of 0.43
+[qwen36] KV cache: float16, 0.22 GiB at 6400 positions (half of float32; Q36_KV=f32 keeps float32)
+[chain] qwen36: 2048 rows per prompt chunk (219 KiB a row, 1.0 GB free on the device; COLI_CUDA_CHAIN_ROWS sets it)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 23 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 22 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 14 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 17 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 16 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 19 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 20 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 21 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 21 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 19 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 20 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 18 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 21 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 19 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 21 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 22 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 25 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 20 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 20 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 17 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 17 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 19 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 19 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 18 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 19 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 20 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 21 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 22 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 18 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 19 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 19 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 23 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 25 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 24 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 23 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 20 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 24 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 25 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 21 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 21 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 21 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 23 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 20 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[timers] window: moe 24 ms/token (last 32)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[chain] qwen36: 1438 forwards, 139487 frames (1757307 ops, 562258 matmuls), 17465.1 ms waiting for the device, 30334.8 ms of routed experts on the host, 239.4 MiB on the device; per decode token 12.11 ms waiting, 20.49 ms of experts (1437 tokens)
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 200 -
+[api] <IP_ADDRESS> - "GET /profile HTTP/1.1" 200 -
+[qtier] HEAT_FILE saved: <COLIBRI_LOCAL>/flint-gpu-role-20261104-135808/state-ti-primary/expert-heat.bin
+[api] <IP_ADDRESS> - "GET /health HTTP/1.1" 503 -

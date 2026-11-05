@@ -1,0 +1,22 @@
+{
+  "env": {
+    "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+    "CUDA_VISIBLE_DEVICES": "<GPU_ID>,<GPU_ID>",
+    "OMP_NUM_THREADS": "8",
+    "COLI_NO_OMP_TUNE": "1",
+    "Q36_MTP": "0",
+    "COLI_CUDA": "1",
+    "COLI_VULKAN": "0",
+    "COLI_CUDA_CHAIN": "1",
+    "COLI_SETUP_HOME": "<COLIBRI_LOCAL>/flint-optimization-20261104/state-cuda-dual",
+    "COLI_ENGINE": "<COLIBRI_LOCAL>/build-176b-dual/c/qwen36",
+    "COLI_PLACE": "lmhead=0,attnproj=0,attnout=0,shexp=0,experts=all",
+    "COLI_CUDA_CHAIN_MOE": "0"
+  },
+  "args": [
+    "--gpu",
+    "0,1",
+    "--vram",
+    "5.0"
+  ]
+}

@@ -1,0 +1,1 @@
+gcc -O3 -march=native -fopenmp -pthread -Wall -Wextra -Wno-unused-parameter -Wno-misleading-indentation -Wno-unused-function  -MMD -MP -DCOLI_CUDA qwen36.c qwen36_tier.o  backend_cuda.o cuda_chain.o cu_xb.o cu_tier.o   -o qwen36 -lm -fopenmp -pthread  -L/usr/lib64 -Wl,-rpath,/usr/lib64 -lcudart -lcublasLt -lcublas -lstdc++

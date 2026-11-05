@@ -1,0 +1,17 @@
+{
+  "screen_profiles": [
+    "cuda-baseline",
+    "cuda-dual",
+    "vulkan",
+    "vulkan-dual",
+    "cuda-dual-tuned"
+  ],
+  "full_profile": "vulkan-dual-full",
+  "omp_num_threads": 8,
+  "temperature": 1,
+  "max_output_tokens": 6144,
+  "context": 8192,
+  "reasoning_ui": false,
+  "model_emits_reasoning": true,
+  "selected_launcher": "<COLIBRI_LOCAL>/start-colibri-flint-q8-dual.sh"
+}

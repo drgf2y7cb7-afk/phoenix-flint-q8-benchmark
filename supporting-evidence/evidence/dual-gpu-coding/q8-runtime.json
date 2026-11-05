@@ -1,0 +1,22 @@
+[
+  {
+    "pid": 157099,
+    "args": [
+      "<COLIBRI_LOCAL>/bin/qwen36-cuda-sm61-sm89",
+      "256",
+      ""
+    ],
+    "config": {
+      "HEAT_FILE": "<COLIBRI_LOCAL>/flint-q6-vs-q8-20261104-141136/state-q8/expert-heat.bin",
+      "CUDA_EXPERT_GB": "auto",
+      "COLI_PLACE": "lmhead=0,attnproj=0,shexp=0,experts=all",
+      "COLI_CUDA_CHAIN_MOE": "0",
+      "COLI_TIMERS": "1",
+      "COLI_SETUP_HOME": "<COLIBRI_LOCAL>/flint-q6-vs-q8-20261104-141136/state-q8",
+      "COLI_NO_OMP_TUNE": "1",
+      "CUDA_VISIBLE_DEVICES": "<GPU_ID>,<GPU_ID>",
+      "QT_PREFILL_REPLAN": "0",
+      "OMP_NUM_THREADS": "8"
+    }
+  }
+]

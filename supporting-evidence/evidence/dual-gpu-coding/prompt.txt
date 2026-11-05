@@ -1,0 +1,54 @@
+HARD CODE REPAIR EXPERIMENT — Python asyncio cache
+
+Review the implementation below. It contains one subtle concurrency defect. Diagnose it and give a minimal fix; do not redesign the public API.
+
+Required semantics:
+- Concurrent get(key) calls in the same generation share one loader task.
+- Different keys may load concurrently. Never hold the lock while awaiting the loader.
+- invalidate(key) begins a new generation. Existing waiters may finish with their old result; later callers must join or create the new generation's load. An old completion must not disrupt the new generation.
+- A stale result must never replace a newer cached value.
+- Cancelling one caller must not cancel the shared load. Failed loads must remain retryable.
+
+Respond in at most 550 words: (1) the precise bug and a concrete interleaving, (2) a unified diff against buggy_cache.py, (3) a regression-test scenario. Your patch will be run against tests fixed before your answer. Focus on the supplied behavior; no unrelated refactoring.
+
+```python
+"""An asynchronous per-key cache with coalesced loads and invalidation."""
+import asyncio
+
+
+class AsyncCache:
+    def __init__(self, loader):
+        self._loader = loader
+        self._values = {}
+        self._flights = {}
+        self._epochs = {}
+        self._lock = asyncio.Lock()
+
+    async def get(self, key):
+        async with self._lock:
+            if key in self._values:
+                return self._values[key]
+            task = self._flights.get(key)
+            if task is None:
+                epoch = self._epochs.get(key, 0)
+                task = asyncio.create_task(self._load(key, epoch))
+                self._flights[key] = task
+        return await asyncio.shield(task)
+
+    async def invalidate(self, key):
+        async with self._lock:
+            self._epochs[key] = self._epochs.get(key, 0) + 1
+            self._values.pop(key, None)
+            self._flights.pop(key, None)
+
+    async def _load(self, key, epoch):
+        try:
+            value = await self._loader(key)
+            async with self._lock:
+                if self._epochs.get(key, 0) == epoch:
+                    self._values[key] = value
+            return value
+        finally:
+            async with self._lock:
+                self._flights.pop(key, None)
+```

@@ -1,0 +1,6 @@
+{"profile":"cuda-baseline","unix":1793820606.968,"max_tokens":256,"temperature":0}
+{"profile":"cuda-dual","unix":1793820703.14,"max_tokens":256,"temperature":0}
+{"profile":"vulkan","unix":1793820888.631,"max_tokens":256,"temperature":0}
+{"profile":"vulkan-dual","unix":1793821011.066,"max_tokens":256,"temperature":0}
+{"profile":"cuda-dual-tuned","unix":1793821102.555,"max_tokens":256,"temperature":0}
+{"profile":"vulkan-dual-full","unix":1793821258.194,"max_tokens":6144,"temperature":1}

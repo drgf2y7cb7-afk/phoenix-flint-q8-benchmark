@@ -1,0 +1,58 @@
+{
+  "full_run_gpu_sampled_peaks": {
+    "NVIDIA GeForce RTX 4060": {
+      "max_total_vram_mib": 5193.0,
+      "max_temperature_c": 53.0,
+      "max_utilization_pct": 45.0
+    },
+    "NVIDIA GeForce GTX 1070": {
+      "max_total_vram_mib": 7056.0,
+      "max_temperature_c": 56.0,
+      "max_utilization_pct": 59.0
+    }
+  },
+  "engine_rss_peak_gib": 32.97,
+  "min_available_ram_gib": 35.99,
+  "final_health": {
+    "status": "ok",
+    "arch": "qwen36",
+    "scheduler": {
+      "active": 0,
+      "queued": 0,
+      "capacity": 1,
+      "max_queue": 8,
+      "queue_timeout_seconds": 300.0,
+      "admitted": 1,
+      "completed": 1,
+      "failed": 0,
+      "rejected": 0,
+      "timed_out": 0,
+      "cancelled": 0
+    },
+    "engine_restarts": 0,
+    "kv_slots": 1,
+    "input_modalities": [
+      "text"
+    ],
+    "continue_assistant": true,
+    "context_compaction": true,
+    "context_tokens": 8192,
+    "max_tokens": 6144,
+    "capabilities": [
+      "chat",
+      "systemone"
+    ],
+    "live": [],
+    "system": {
+      "ram_total_gb": 78.49,
+      "ram_avail_gb": 36.01,
+      "load1": 2.7,
+      "cores": 16,
+      "engine_rss_gb": 32.97,
+      "engine_threads": 19,
+      "engine_cpu_pct": 0.5
+    }
+  },
+  "assessment": "FAIL: final answer incorrectly says reduced contact resistance increases thermal resistance, and continues to muddle thermal pads/cooling with insulation. No runtime failure.",
+  "note": "GPU memory includes desktop and other processes; utilization/temperatures are sampled peaks, not continuous hardware maxima."
+}

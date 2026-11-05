@@ -1,0 +1,24 @@
+[
+  {
+    "profile": "q8",
+    "active_samples": 307,
+    "peak_engine_rss_gib": 40.2,
+    "min_system_available_gib": 30.62,
+    "gpus": {
+      "0": {
+        "name": "NVIDIA GeForce RTX 4060",
+        "peak_total_mib": 7074.0,
+        "peak_util_pct": 38.0,
+        "max_temp_c": 58.0,
+        "max_power_w": null
+      },
+      "1": {
+        "name": "NVIDIA GeForce GTX 1080 Ti",
+        "peak_total_mib": 9571.0,
+        "peak_util_pct": 33.0,
+        "max_temp_c": 55.0,
+        "max_power_w": 76.57
+      }
+    }
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "capture_time_utc": "2026-11-04T22:31:03.678765+00:00",
+  "scope": "read-only publication-execution-environment inspection, not per-run historical inventory",
+  "os_pretty_name": "Debian GNU/Linux 13 (trixie)",
+  "debian_version_full": "13.7",
+  "cpu_model": "AMD Ryzen 7 2700X Eight-Core Processor",
+  "logical_cpus": 16,
+  "mem_total_bytes": 84281278464,
+  "mem_total_gib": 78.49305725097656,
+  "gpu_live_query": "not available in publication execution environment; historical identity verified from experiment logs",
+  "source_commit": "0a5504a1dc64f86fcd0fe7db298b0448c730e7e6",
+  "source_tracked_changes": "",
+  "dual_cuda_binary_sha256_read_only_recheck": "52985a9a11148e1f036e01f27f36f556a8f697d67f5e46b91f4f18fa60becb42"
+}

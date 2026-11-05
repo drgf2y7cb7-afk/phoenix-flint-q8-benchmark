@@ -1,0 +1,14 @@
+{
+  "HEAT_FILE": [
+    "<COLIBRI_LOCAL>/flint-gpu-role-20261104-135808/state-ti-primary/expert-heat.bin",
+    "<COLIBRI_LOCAL>/flint-gpu-role-20261104-135808/state-4060-primary/expert-heat.bin"
+  ],
+  "COLI_SETUP_HOME": [
+    "<COLIBRI_LOCAL>/flint-gpu-role-20261104-135808/state-ti-primary",
+    "<COLIBRI_LOCAL>/flint-gpu-role-20261104-135808/state-4060-primary"
+  ],
+  "COLI_PLACE": [
+    "lmhead=1,attnproj=1,shexp=1,experts=all",
+    "lmhead=0,attnproj=0,shexp=0,experts=all"
+  ]
+}

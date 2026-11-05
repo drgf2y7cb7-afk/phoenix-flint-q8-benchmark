@@ -1,0 +1,16 @@
+{
+  "seq": 1,
+  "turns": [
+    {
+      "wall_s": 223.770323,
+      "prompt_tokens": 491,
+      "completion_tokens": 4569,
+      "expert_disk_s": 0.0,
+      "expert_wait_s": 0.0,
+      "expert_matmul_s": 169.545772,
+      "attention_s": 0.0,
+      "lm_head_s": 0.000752,
+      "forwards": 4570
+    }
+  ]
+}

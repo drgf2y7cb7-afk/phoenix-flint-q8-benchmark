@@ -1,0 +1,37 @@
+{
+  "checked_at_utc": "2026-11-04T22:29:55.394832+00:00",
+  "fixture_replay": {
+    "buggy_cache": {
+      "exit_code": 1,
+      "expected_outcome_observed": true,
+      "checks": 7,
+      "failures": 2
+    },
+    "flint_fixed_cache": {
+      "exit_code": 0,
+      "expected_outcome_observed": true,
+      "checks": 7,
+      "failures": 0
+    },
+    "q8_fixed_cache": {
+      "exit_code": 0,
+      "expected_outcome_observed": true,
+      "checks": 7,
+      "failures": 0
+    }
+  },
+  "markdown_missing_local_links": [],
+  "public_json_parse_errors": 0,
+  "privacy_pattern_findings": 0,
+  "public_evidence_hash_and_measurement_checks": 398,
+  "run_rows": 40,
+  "inference_run_by_this_audit": false,
+  "original_source_writes_by_this_audit": false,
+  "uploads_or_publication": false,
+  "saved_settings_screenshots_visually_checked": [
+    "prefill-cache/cache-off-zero: temperature 0.0, output 6144",
+    "gpu-role/ti-primary: temperature 0.0, output 6144"
+  ],
+  "dual_cuda_binary_hash_matches_recorded": true,
+  "source_snapshot_note": "368 collected source files still matched at the read-only recheck; two ongoing experiment log/sample files had changed after capture. This fixed snapshot is preserved and no originals were edited by this audit."
+}

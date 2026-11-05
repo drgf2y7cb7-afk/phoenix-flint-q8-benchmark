@@ -1,0 +1,16 @@
+{
+  "question": "prompt.txt",
+  "temperature": 0,
+  "threads": 8,
+  "ctx": 8192,
+  "max_tokens": 6144,
+  "gpu": "CUDA; 4060 primary, experts all",
+  "cache": "same frozen expert history for each independent start",
+  "grading": "original seven executable tests plus diagnosis; first answer without hints",
+  "limits": "one selected coding case; no general quality claim",
+  "sha256": {
+    "start-colibri.sh": "2d37695ca22d15a6687e53b488bb55e703ac1684231324751159bcfa788ab64d",
+    "start-colibri-flint-q8-cuda-dual.sh": "1d2ba762e38063e6daeebf65d107b0ee1590c0986baab705d0355606f5e51116",
+    "bin/qwen36-cuda-sm61-sm89": "52985a9a11148e1f036e01f27f36f556a8f697d67f5e46b91f4f18fa60becb42"
+  }
+}

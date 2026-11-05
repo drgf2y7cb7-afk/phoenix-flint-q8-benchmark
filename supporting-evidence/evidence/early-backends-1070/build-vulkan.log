@@ -1,0 +1,12 @@
+gcc -O3 -march=native -fopenmp -pthread -Wall -Wextra -Wno-unused-parameter -Wno-misleading-indentation -Wno-unused-function  -MMD -MP -DCOLI_VULKAN -c backend_vulkan.c -o backend_vulkan.o
+gcc -O3 -march=native -fopenmp -pthread -Wall -Wextra -Wno-unused-parameter -Wno-misleading-indentation -Wno-unused-function  -MMD -MP -DCOLI_VULKAN -c vk_tier.c -o vk_tier.o
+gcc -O3 -march=native -fopenmp -pthread -Wall -Wextra -Wno-unused-parameter -Wno-misleading-indentation -Wno-unused-function  -MMD -MP -DCOLI_VULKAN -c vk_chain.c -o vk_chain.o
+../toolchain/usr/bin/glslc --target-env=vulkan1.2 shaders/qmatmul_gate_up.comp -o shaders/qmatmul_gate_up.spv
+../toolchain/usr/bin/glslc --target-env=vulkan1.2 shaders/qmatmul_bd.comp -o shaders/qmatmul_bd.spv
+../toolchain/usr/bin/glslc --target-env=vulkan1.2 shaders/qmatmul_gate_up_bd.comp -o shaders/qmatmul_gate_up_bd.spv
+../toolchain/usr/bin/glslc --target-env=vulkan1.2 shaders/attention_absorb.comp -o shaders/attention_absorb.spv
+../toolchain/usr/bin/glslc --target-env=vulkan1.2 shaders/rmsnorm.comp -o shaders/rmsnorm.spv
+../toolchain/usr/bin/glslc --target-env=vulkan1.2 shaders/expert_act.comp -o shaders/expert_act.spv
+../toolchain/usr/bin/glslc --target-env=vulkan1.2 shaders/expert_act_v4.comp -o shaders/expert_act_v4.spv
+../toolchain/usr/bin/glslc --target-env=vulkan1.2 shaders/chain_dnconv_rows.comp -o shaders/chain_dnconv_rows.spv
+gcc -O3 -march=native -fopenmp -pthread -Wall -Wextra -Wno-unused-parameter -Wno-misleading-indentation -Wno-unused-function -MMD -MP -DCOLI_VULKAN qwen36.c     backend_vulkan.o vk_tier.o vk_chain.o -o qwen36 -lm -fopenmp -pthread -ldl

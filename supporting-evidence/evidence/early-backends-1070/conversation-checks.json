@@ -1,0 +1,32 @@
+{
+  "cuda-dual-conversation.json": {
+    "exact_prompt": true,
+    "finish": "length",
+    "reasoning_characters": 1324
+  },
+  "cuda-baseline-conversation.json": {
+    "exact_prompt": true,
+    "finish": "length",
+    "reasoning_characters": 1319
+  },
+  "vulkan-dual-full-conversation.json": {
+    "exact_prompt": true,
+    "finish": "stop",
+    "reasoning_characters": 4952
+  },
+  "cuda-dual-tuned-conversation.json": {
+    "exact_prompt": true,
+    "finish": "length",
+    "reasoning_characters": 1324
+  },
+  "vulkan-conversation.json": {
+    "exact_prompt": true,
+    "finish": "length",
+    "reasoning_characters": 1276
+  },
+  "vulkan-dual-conversation.json": {
+    "exact_prompt": true,
+    "finish": "length",
+    "reasoning_characters": 1256
+  }
+}

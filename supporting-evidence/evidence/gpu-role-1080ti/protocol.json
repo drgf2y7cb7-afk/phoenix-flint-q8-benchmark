@@ -1,0 +1,20 @@
+{
+  "question": "GPU activity diagnostic 2: Explain how insulation slows heat transfer, using general physical principles in about 250 words. This is a hardware timing check. Do not use tools.",
+  "profiles": [
+    "ti-primary",
+    "4060-primary"
+  ],
+  "threads": 8,
+  "temperature": 0,
+  "max_tokens": 6144,
+  "ctx": 8192,
+  "CUDA_EXPERT_GB": "auto",
+  "QT_PREFILL_REPLAN": 0,
+  "COLI_TIMERS": 1,
+  "seed": "identical fresh copies of frozen 1080 Ti experiment history",
+  "comparison": "Ti primary first, then fresh 4060 primary control; full answers, same question, same model and settings. Keep an improvement only if useful and repeat/normal validation supports it.",
+  "ui_temperature_method": "Use keyboard Home and verify visible numeric label 0.0, not just the slider value.",
+  "limitations": "One question. Auto cache sizes can vary with desktop memory. Different GPU arithmetic can change reasoning and output even at temperature zero.",
+  "prior_reference": "<COLIBRI_LOCAL>/flint-prefill-cache-20261104-134413/comparison.json",
+  "accuracy_standard": "Correct conduction/convection/radiation explanation; fail materially misleading heat-transfer advice, especially claiming insulation in a GPU-to-cooler path lowers chip temperature."
+}
