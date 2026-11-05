@@ -1,0 +1,76 @@
+{
+  "checks": [
+    {
+      "source_alias": "tuned-1080ti/metrics.json",
+      "quoted_numeric_or_test_output_match": true
+    },
+    {
+      "source_alias": "tuned-1080ti/resources.json",
+      "quoted_numeric_or_test_output_match": true
+    },
+    {
+      "source_alias": "prefill-cache-1080ti/cache-off-zero-profile.json",
+      "quoted_numeric_or_test_output_match": true
+    },
+    {
+      "source_alias": "prefill-cache-1080ti/cache-on-profile.json",
+      "quoted_numeric_or_test_output_match": true
+    },
+    {
+      "source_alias": "prefill-cache-1080ti/metrics.json",
+      "quoted_numeric_or_test_output_match": true
+    },
+    {
+      "source_alias": "gpu-role-1080ti/4060-primary-profile.json",
+      "quoted_numeric_or_test_output_match": true
+    },
+    {
+      "source_alias": "gpu-role-1080ti/ti-primary-profile.json",
+      "quoted_numeric_or_test_output_match": true
+    },
+    {
+      "source_alias": "gpu-role-1080ti/metrics.json",
+      "quoted_numeric_or_test_output_match": true
+    },
+    {
+      "source_alias": "dual-gpu-coding/q8-profile.json",
+      "quoted_numeric_or_test_output_match": true
+    },
+    {
+      "source_alias": "dual-gpu-coding/metrics.json",
+      "quoted_numeric_or_test_output_match": true
+    },
+    {
+      "source_alias": "dual-gpu-coding/q8-test-results.txt",
+      "quoted_numeric_or_test_output_match": true
+    },
+    {
+      "source_alias": "dual-gpu-coding/q8-grade.json",
+      "quoted_numeric_or_test_output_match": true
+    },
+    {
+      "source_alias": "thread-cache-1070/metrics.json",
+      "quoted_numeric_or_test_output_match": true
+    },
+    {
+      "source_alias": "coding-fixtures/test_cache.py",
+      "byte_match": true
+    },
+    {
+      "source_alias": "coding-fixtures/buggy_cache.py",
+      "byte_match": true
+    },
+    {
+      "source_alias": "coding-fixtures/flint_fixed_cache.py",
+      "byte_match": true
+    },
+    {
+      "source_alias": "coding-fixtures/q8_fixed_cache.py",
+      "byte_match": true
+    }
+  ],
+  "source_snapshot_notes": [
+    "The current source metrics file now also includes Q6 and an expanded-window Q8 RAM-availability minimum (29.72 vs snapshot 30.62 GiB). All quoted Q8 timing/token/RSS fields match. The concise report does not use that RAM minimum; the prior snapshot is unchanged."
+  ],
+  "scope": "Quoted figures cross-checked against original artifacts; no inference or production writes."
+}

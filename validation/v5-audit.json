@@ -1,0 +1,85 @@
+{
+  "verified_at_utc": "2026-11-05T17:42:10.224325+00:00",
+  "base_release": "verified v4",
+  "public_release_authorized": true,
+  "original_documentation_license": "CC-BY-4.0",
+  "original_scripts_license": "MIT",
+  "mit_file_scope": [
+    "supporting-evidence/scripts/rebuild_tables.py",
+    "tools/verify_coding.py"
+  ],
+  "third_party_relicensing": false,
+  "prior_package_files_checked": 3462,
+  "prior_package_changes": [],
+  "supporting_evidence_files": 308,
+  "supporting_evidence_byte_identical": true,
+  "scientific_results_and_limitations_unchanged": true,
+  "test_command_count": 7,
+  "all_expected_test_statuses_observed": true,
+  "documented_command_occurrences_verified": 12,
+  "baseline": {
+    "passed": 5,
+    "failed": 2,
+    "exit": 1
+  },
+  "single_gpu_fix": {
+    "passed": 7,
+    "failed": 0,
+    "exit": 0
+  },
+  "dual_gpu_fix": {
+    "passed": 7,
+    "failed": 0,
+    "exit": 0
+  },
+  "evidence_rows": 40,
+  "evidence_check_count": 401,
+  "regeneration_check_count": 398,
+  "new_inference_runs": 0,
+  "new_performance_benchmarks": 0,
+  "pdfs": {
+    "output/pdf/public-summary.pdf": {
+      "pages": 1,
+      "author": "Jaime Lawson, Founder & Research Lead, Phoenix Applied Technologies",
+      "sha256": "2f3f665ef38b782665f9094f2aa9ec1b62ced0618aa0c1e72e2ba518425730fb",
+      "contact_and_cc_by_notice_present": true
+    },
+    "output/pdf/technical-report.pdf": {
+      "pages": 4,
+      "author": "Jaime Lawson, Founder & Research Lead, Phoenix Applied Technologies",
+      "sha256": "e7b6e9abc1c3cd59299419f67c05ed469624f9e5a4e379674e6ee3e3cb8595ff",
+      "contact_and_cc_by_notice_present": true
+    }
+  },
+  "pdf_visual_review": "All five final pages inspected; no clipping or layout defects",
+  "colibri_and_font_notices_unchanged": true,
+  "git": {
+    "settings_changed": false,
+    "email_configured": false,
+    "commits_present": false,
+    "remotes_present": false
+  },
+  "production_changes": false,
+  "github_repository_created": false,
+  "github_upload_or_post": false,
+  "publication_readiness": "Technical/test/integrity/privacy checks pass; selected licenses applied with exact scope. Historical fixture authorship and generated-output provenance remain qualified, not unconditionally rights-cleared.",
+  "identified_license_conflicts": [],
+  "remaining_provenance_questions": [
+    "Original authorship/license declaration for historical buggy_cache.py, test_cache.py and their prompt copies",
+    "Generated-output copyrightability/source/reuse provenance for saved Flint transcripts and code; no blanket new grant",
+    "Unresolved immutable base-model revision behind pinned GGUF; no weights shipped"
+  ],
+  "handoff_items": [
+    "Actual repository destination and URL",
+    "Authorized publishing route in parent",
+    "Verified account-specific noreply address for any local Git commits"
+  ],
+  "unapproved_privacy_findings": [],
+  "broken_local_links": [],
+  "intentional_repository_url_placeholders": [
+    "announcements/colibri-discussion.md",
+    "announcements/github-release.md",
+    "announcements/hacker-news-brief.md",
+    "announcements/reddit-localllama-brief.md"
+  ]
+}

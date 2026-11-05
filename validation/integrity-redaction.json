@@ -1,0 +1,21 @@
+{
+  "verified_at_utc": "2026-11-04T23:03:39.340520+00:00",
+  "prior_package_files_checked": 691,
+  "prior_package_changes": [],
+  "separate_evidence_files": 308,
+  "separate_evidence_byte_identical": true,
+  "original_artifact_figure_crosschecks": 17,
+  "pdf_page_counts": {
+    "output/pdf/technical-report.pdf": 4,
+    "output/pdf/public-summary.pdf": 1
+  },
+  "pdf_visual_review": "All five pages inspected; final changed pages re-rendered and inspected; no clipping or layout defects found.",
+  "text_and_pdf_files_scanned": 319,
+  "redaction_pattern_findings": [],
+  "json_parse_errors": [],
+  "broken_local_markdown_links": [],
+  "new_model_inference_runs": 0,
+  "production_changes": false,
+  "public_publication": false,
+  "privacy_note": "Pattern scan plus review of new Markdown/PDFs and verification logs. Numerical seeds and the previously sanitized evidence tree are preserved unchanged."
+}

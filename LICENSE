@@ -1,0 +1,17 @@
+Phoenix Applied Technologies - Flint Q8 Benchmark
+
+This repository contains materials under different terms; it has no blanket license.
+
+Original research documentation, to the extent owned by Jaime Lawson / Phoenix Applied Technologies:
+  Creative Commons Attribution 4.0 International (CC BY 4.0)
+  Full text: licenses/LICENSE-CC-BY-4.0.txt
+
+Original benchmark scripts explicitly listed in licenses/LICENSE-SCOPE.csv:
+  MIT License
+  Full text: licenses/LICENSE-MIT.txt
+
+Copyright 2026 Jaime Lawson, Phoenix Applied Technologies, for original contributions only.
+
+See LICENSING.md and licenses/LICENSE-SCOPE.csv for exact file scope and exclusions.
+Third-party software, source excerpts, model weights, fonts and generated-output evidence are not relicensed by this notice.
+Existing copyright, license and attribution notices are preserved in licenses/ and THIRD-PARTY-NOTICES.md.

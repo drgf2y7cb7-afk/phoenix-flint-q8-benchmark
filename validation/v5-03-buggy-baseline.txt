@@ -1,0 +1,60 @@
+test_cancelled_caller_does_not_cancel_shared_load (__main__.CacheTests.test_cancelled_caller_does_not_cancel_shared_load) ... ok
+test_different_keys_load_concurrently (__main__.CacheTests.test_different_keys_load_concurrently) ... ok
+test_failure_can_be_retried (__main__.CacheTests.test_failure_can_be_retried) ... ok
+test_old_failure_preserves_new_flight (__main__.CacheTests.test_old_failure_preserves_new_flight) ... FAIL
+test_old_success_preserves_new_flight (__main__.CacheTests.test_old_success_preserves_new_flight) ... FAIL
+test_same_generation_coalesces_and_caches (__main__.CacheTests.test_same_generation_coalesces_and_caches) ... ok
+test_stale_completion_cannot_overwrite_new_value (__main__.CacheTests.test_stale_completion_cannot_overwrite_new_value) ... ok
+
+======================================================================
+FAIL: test_old_failure_preserves_new_flight (__main__.CacheTests.test_old_failure_preserves_new_flight)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "<CLEAN_REPOSITORY>/supporting-evidence/tests/async-cache/test_cache.py", line 102, in test_old_failure_preserves_new_flight
+    await self.interleaved_invalidation(fail_old=True)
+  File "<CLEAN_REPOSITORY>/supporting-evidence/tests/async-cache/test_cache.py", line 95, in interleaved_invalidation
+    self.assertEqual((count, observed), (2, [20, 20]))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (3, [20, 999]) != (2, [20, 20])
+
+First differing element 0:
+3
+2
+
+- (3, [20, 999])
++ (2, [20, 20])
+
+======================================================================
+FAIL: test_old_success_preserves_new_flight (__main__.CacheTests.test_old_success_preserves_new_flight)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "<CLEAN_REPOSITORY>/supporting-evidence/tests/async-cache/test_cache.py", line 99, in test_old_success_preserves_new_flight
+    await self.interleaved_invalidation()
+  File "<CLEAN_REPOSITORY>/supporting-evidence/tests/async-cache/test_cache.py", line 95, in interleaved_invalidation
+    self.assertEqual((count, observed), (2, [20, 20]))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (3, [20, 999]) != (2, [20, 20])
+
+First differing element 0:
+3
+2
+
+- (3, [20, 999])
++ (2, [20, 20])
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.036s
+
+FAILED (failures=2)

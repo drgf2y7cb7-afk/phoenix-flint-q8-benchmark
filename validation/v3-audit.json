@@ -1,0 +1,137 @@
+{
+  "verified_at_utc": "2026-11-04T23:25:13.103707+00:00",
+  "prior_package_files_checked": 1679,
+  "prior_package_changes": [],
+  "supporting_evidence_files": 308,
+  "supporting_evidence_byte_identical": true,
+  "technical_measurement_text_unchanged": true,
+  "summary_result_table_unchanged": true,
+  "original_figure_crosschecks_retained": 17,
+  "all_seven_previous_test_commands_and_outputs_unchanged": true,
+  "documented_command_occurrences_verified": [
+    {
+      "document": "README.md",
+      "command": "python3 tools/verify_coding.py"
+    },
+    {
+      "document": "README.md",
+      "command": "python3 supporting-evidence/scripts/rebuild_tables.py --check"
+    },
+    {
+      "document": "TECHNICAL-REPORT.md",
+      "command": "python3 tools/verify_coding.py"
+    },
+    {
+      "document": "TECHNICAL-REPORT.md",
+      "command": "python3 supporting-evidence/scripts/rebuild_tables.py --check"
+    },
+    {
+      "document": "TECHNICAL-REPORT.md",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 test_cache.py buggy_cache"
+    },
+    {
+      "document": "TECHNICAL-REPORT.md",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 test_cache.py flint_fixed_cache"
+    },
+    {
+      "document": "TECHNICAL-REPORT.md",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 test_cache.py q8_fixed_cache"
+    },
+    {
+      "document": "supporting-evidence/README.md",
+      "command": "python3 scripts/rebuild_tables.py --check"
+    },
+    {
+      "document": "supporting-evidence/docs/REPRODUCIBILITY.md",
+      "command": "python3 scripts/rebuild_tables.py --check"
+    },
+    {
+      "document": "supporting-evidence/docs/REPRODUCIBILITY.md",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 test_cache.py buggy_cache"
+    },
+    {
+      "document": "supporting-evidence/docs/REPRODUCIBILITY.md",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 test_cache.py flint_fixed_cache"
+    },
+    {
+      "document": "supporting-evidence/docs/REPRODUCIBILITY.md",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 test_cache.py q8_fixed_cache"
+    }
+  ],
+  "new_clean_copy_root_checks": [
+    {
+      "command": "python3 tools/verify_coding.py",
+      "working_directory": ".",
+      "exit_status": 0,
+      "log": "v3-coding-runner.txt"
+    },
+    {
+      "command": "python3 supporting-evidence/scripts/rebuild_tables.py --check",
+      "working_directory": ".",
+      "exit_status": 0,
+      "log": "v3-evidence-check.txt"
+    }
+  ],
+  "pdfs": {
+    "output/pdf/public-summary.pdf": {
+      "pages": 1,
+      "author": "Jaime Lawson, Founder & Research Lead, Phoenix Applied Technologies",
+      "sha256": "005b8bf49c1e899bee0288fe768b7c506cdde97d3c1dbbc90fef0d0db43e7e00"
+    },
+    "output/pdf/technical-report.pdf": {
+      "pages": 4,
+      "author": "Jaime Lawson, Founder & Research Lead, Phoenix Applied Technologies",
+      "sha256": "74312f63bddadfecd2ede3050cab673629abeb233c4fec2d62c8ac99f7f3a3e5"
+    }
+  },
+  "pdf_visual_review": "All five final pages visually inspected; no clipping or layout defects found.",
+  "upstream_notice_checks": [
+    {
+      "path": "licenses/colibri/LICENSE",
+      "sha256": "fb9b97e1cc193452870025f6cf501003130561681659e265e5fdf6c023f71325",
+      "checkout_and_pinned_source_match": true
+    },
+    {
+      "path": "licenses/colibri/NOTICE",
+      "sha256": "c8a3ae98b85c30294ac8adeea94360dc25264dea0786a3d1ab0b48a4bc31b001",
+      "checkout_and_pinned_source_match": true
+    },
+    {
+      "path": "licenses/colibri/THIRD_PARTY_NOTICES.md",
+      "sha256": "283fa1a9c27a8930340add500f2f0453dd15568ec38c21a1fff4f3d1f716ebc7",
+      "checkout_and_pinned_source_match": true
+    }
+  ],
+  "inventory_entries": 328,
+  "text_and_pdf_files_scanned": 341,
+  "privacy_findings": [],
+  "broken_local_links": [],
+  "intentional_repository_url_placeholders": [
+    "announcements/colibri-discussion.md",
+    "announcements/github-release.md",
+    "announcements/hacker-news-brief.md",
+    "announcements/reddit-localllama-brief.md"
+  ],
+  "json_parse_errors": [],
+  "git_identity": {
+    "local_repository_initialized": true,
+    "approved_name_configured": true,
+    "useConfigOnly": true,
+    "email_configured": false,
+    "author_identity_ready": false,
+    "global_identity_changed": false,
+    "commits_created": 0,
+    "remote_configured": false,
+    "email_values_printed": false
+  },
+  "new_model_inference_runs": 0,
+  "production_changes": false,
+  "public_publication": false,
+  "release_decisions_pending": [
+    "GitHub account and actual noreply email verification",
+    "Original report/tooling license selection and scope",
+    "Local fixture/prompt and generated transcript/code rights review",
+    "Verified public contact and actual repository URL",
+    "Jaime approval of final package and any public action"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "verified_at_utc": "2026-11-05T16:50:53.212099+00:00",
+  "revision": "v4 approved public contact update",
+  "approved_public_contact": "jmlawson@outlook.com",
+  "public_contact_authorized": true,
+  "git_email_authorized": false,
+  "prior_package_files_checked": 2750,
+  "prior_package_changes": [],
+  "supporting_evidence_files": 308,
+  "supporting_evidence_byte_identical": true,
+  "scientific_report_bodies_unchanged": true,
+  "readme_measurements_unchanged": true,
+  "retained_validation_records": [
+    "validation/01-root-coding-runner.txt",
+    "validation/02-root-evidence-check.txt",
+    "validation/03-buggy-baseline.txt",
+    "validation/04-single-gpu-fix.txt",
+    "validation/05-dual-gpu-fix.txt",
+    "validation/06-archived-root-check.txt",
+    "validation/07-archived-rebuild.txt",
+    "validation/VERIFICATION.md",
+    "validation/figure-crosscheck.json",
+    "validation/integrity-redaction.json",
+    "validation/test-commands.json",
+    "validation/v3-audit.json",
+    "validation/v3-coding-runner.txt",
+    "validation/v3-evidence-check.txt"
+  ],
+  "verification_method": "Preserved verified runner/fixture/checker bytes and prior outputs; no redundant test or inference execution for contact-only revision",
+  "pdfs": {
+    "output/pdf/public-summary.pdf": {
+      "pages": 1,
+      "author": "Jaime Lawson, Founder & Research Lead, Phoenix Applied Technologies",
+      "approved_contact_present_in_body": true,
+      "author_and_creator_metadata_unchanged": true,
+      "sha256": "ea8c82bdc3327d4106fd31e86d128fafd2b0480fd3e1db36109093a77339f721"
+    },
+    "output/pdf/technical-report.pdf": {
+      "pages": 4,
+      "author": "Jaime Lawson, Founder & Research Lead, Phoenix Applied Technologies",
+      "approved_contact_present_in_body": true,
+      "author_and_creator_metadata_unchanged": true,
+      "sha256": "fc8d3c12acbfc3520d1e1ad39578b5dab53c7a20a8447bbcdd2513b35adb1f63"
+    }
+  },
+  "pdf_visual_review": "All five pages inspected; no clipping or layout defects.",
+  "git": {
+    "settings_changed": false,
+    "new_repository_initialized": false,
+    "email_configured": false,
+    "commits_present": false,
+    "remotes_present": false
+  },
+  "new_model_inference_runs": 0,
+  "production_changes": false,
+  "public_publication": false,
+  "license_choice_changed": false,
+  "remaining_release_decisions": [
+    "Original report/tooling licenses and third-party rights scope",
+    "Actual account-specific GitHub noreply address and repository creation capability",
+    "Approved repository URL",
+    "Jaime approval before public publication"
+  ],
+  "text_and_pdf_files_scanned": 342,
+  "unapproved_privacy_findings": [],
+  "broken_local_links": [],
+  "intentional_repository_url_placeholders": [
+    "announcements/colibri-discussion.md",
+    "announcements/github-release.md",
+    "announcements/hacker-news-brief.md",
+    "announcements/reddit-localllama-brief.md"
+  ],
+  "files_containing_approved_contact": [
+    "CREDITS.md",
+    "PUBLIC-SUMMARY.md",
+    "README.md",
+    "RELEASE-CHECKLIST.md",
+    "TECHNICAL-REPORT.md",
+    "announcements/colibri-discussion.md",
+    "announcements/github-release.md",
+    "announcements/hacker-news-brief.md",
+    "announcements/reddit-localllama-brief.md",
+    "governance/CONTACT.md",
+    "output/pdf/public-summary.pdf",
+    "output/pdf/technical-report.pdf",
+    "validation/V4-AUDIT.md",
+    "validation/v4-audit.json"
+  ]
+}

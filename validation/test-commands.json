@@ -1,0 +1,134 @@
+{
+  "verified_at_utc": "2026-11-04T23:03:38.002633+00:00",
+  "python_version": "3.13.5",
+  "platform": "Linux",
+  "third_party_python_dependencies": [],
+  "clean_repository_copy": true,
+  "constraints": "Local constrained execution environment; disposable repository and fixture copies; CPU/address-space/file-size limits and timeouts; reviewed fixtures contain asyncio cache logic only; no model invocation.",
+  "commands": [
+    {
+      "id": "01-root-coding-runner",
+      "working_directory": ".",
+      "command": "python3 tools/verify_coding.py",
+      "exit_status": 0,
+      "expected_exit_status": 0,
+      "status_matches": true,
+      "log": "01-root-coding-runner.txt"
+    },
+    {
+      "id": "02-root-evidence-check",
+      "working_directory": ".",
+      "command": "python3 supporting-evidence/scripts/rebuild_tables.py --check",
+      "exit_status": 0,
+      "expected_exit_status": 0,
+      "status_matches": true,
+      "log": "02-root-evidence-check.txt"
+    },
+    {
+      "id": "03-buggy-baseline",
+      "working_directory": "supporting-evidence/tests/async-cache",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 test_cache.py buggy_cache",
+      "exit_status": 1,
+      "expected_exit_status": 1,
+      "status_matches": true,
+      "log": "03-buggy-baseline.txt",
+      "tests": 7,
+      "passed": 5,
+      "failed": 2
+    },
+    {
+      "id": "04-single-gpu-fix",
+      "working_directory": "supporting-evidence/tests/async-cache",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 test_cache.py flint_fixed_cache",
+      "exit_status": 0,
+      "expected_exit_status": 0,
+      "status_matches": true,
+      "log": "04-single-gpu-fix.txt",
+      "tests": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    {
+      "id": "05-dual-gpu-fix",
+      "working_directory": "supporting-evidence/tests/async-cache",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 test_cache.py q8_fixed_cache",
+      "exit_status": 0,
+      "expected_exit_status": 0,
+      "status_matches": true,
+      "log": "05-dual-gpu-fix.txt",
+      "tests": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    {
+      "id": "06-archived-root-check",
+      "working_directory": "supporting-evidence",
+      "command": "python3 scripts/rebuild_tables.py --check",
+      "exit_status": 0,
+      "expected_exit_status": 0,
+      "status_matches": true,
+      "log": "06-archived-root-check.txt"
+    },
+    {
+      "id": "07-archived-rebuild",
+      "working_directory": "supporting-evidence",
+      "command": "python3 scripts/rebuild_tables.py",
+      "exit_status": 0,
+      "expected_exit_status": 0,
+      "status_matches": true,
+      "log": "07-archived-rebuild.txt"
+    }
+  ],
+  "documented_command_occurrences_verified": [
+    {
+      "document": "README.md",
+      "command": "python3 tools/verify_coding.py"
+    },
+    {
+      "document": "README.md",
+      "command": "python3 supporting-evidence/scripts/rebuild_tables.py --check"
+    },
+    {
+      "document": "TECHNICAL-REPORT.md",
+      "command": "python3 tools/verify_coding.py"
+    },
+    {
+      "document": "TECHNICAL-REPORT.md",
+      "command": "python3 supporting-evidence/scripts/rebuild_tables.py --check"
+    },
+    {
+      "document": "TECHNICAL-REPORT.md",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 test_cache.py buggy_cache"
+    },
+    {
+      "document": "TECHNICAL-REPORT.md",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 test_cache.py flint_fixed_cache"
+    },
+    {
+      "document": "TECHNICAL-REPORT.md",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 test_cache.py q8_fixed_cache"
+    },
+    {
+      "document": "supporting-evidence/README.md",
+      "command": "python3 scripts/rebuild_tables.py --check"
+    },
+    {
+      "document": "supporting-evidence/docs/REPRODUCIBILITY.md",
+      "command": "python3 scripts/rebuild_tables.py --check"
+    },
+    {
+      "document": "supporting-evidence/docs/REPRODUCIBILITY.md",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 test_cache.py buggy_cache"
+    },
+    {
+      "document": "supporting-evidence/docs/REPRODUCIBILITY.md",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 test_cache.py flint_fixed_cache"
+    },
+    {
+      "document": "supporting-evidence/docs/REPRODUCIBILITY.md",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 test_cache.py q8_fixed_cache"
+    }
+  ],
+  "runner_resolution": "Direct commands succeed from the fixture directory with the expected baseline failure. The new root runner removes working-directory ambiguity. No fixture or generated patch logic was changed.",
+  "inference_runs": 0
+}

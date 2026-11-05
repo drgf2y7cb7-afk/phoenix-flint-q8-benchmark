@@ -1,0 +1,1 @@
+PASS: 40 measured run/case rows, 401 evidence/measurement checks. No inference executed.
