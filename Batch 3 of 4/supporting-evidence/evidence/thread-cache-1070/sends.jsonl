@@ -1,0 +1,13 @@
+{"profile":"t8-v3-r1","unix":1793821916.586,"max_tokens":768,"temperature":0}
+{"profile":"t4-v3-r1","unix":1793822068.163,"max_tokens":768,"temperature":0}
+{"profile":"t6-v3-r1","unix":1793822191.47,"max_tokens":768,"temperature":0}
+{"profile":"t8-v3-r2","unix":1793822332.623,"max_tokens":768,"temperature":0}
+{"profile":"t8-v35-r1","unix":1793822488.7,"max_tokens":768,"temperature":0}
+{"profile":"t8-v4-r1","unix":1793822621.716,"max_tokens":768,"temperature":0}
+{"profile":"c8-v5-r1","unix":1793822772.714,"max_tokens":768,"temperature":0}
+{"profile":"c4-v5-r1","unix":1793822889.732,"max_tokens":768,"temperature":0}
+{"profile":"c6-v5-r1","unix":1793823005.205,"max_tokens":768,"temperature":0}
+{"profile":"c8-v5-r2","unix":1793823131.088,"max_tokens":768,"temperature":0}
+{"profile":"c8-v55-r1","unix":1793823240.293,"max_tokens":768,"temperature":0}
+{"profile":"c8-v55-r2","unix":1793823482.448,"max_tokens":768,"temperature":0}
+{"profile":"cuda-final-full","unix":1793823566.642,"max_tokens":6144,"temperature":1}

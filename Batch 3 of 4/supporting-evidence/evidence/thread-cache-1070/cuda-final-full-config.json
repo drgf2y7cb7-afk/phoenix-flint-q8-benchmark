@@ -1,0 +1,10 @@
+{
+  "backend": "CUDA",
+  "threads": 8,
+  "allowance_gib_per_card": 5.5,
+  "temperature": 1,
+  "max_output_tokens": 6144,
+  "context_tokens": 8192,
+  "log": "c8-v55-r2.log",
+  "note": "Normal new UI conversation after fixed-token confirmation in same production engine; in-memory routing history is allowed to evolve."
+}

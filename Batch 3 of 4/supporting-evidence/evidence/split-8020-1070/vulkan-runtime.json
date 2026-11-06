@@ -1,0 +1,17 @@
+[
+  {
+    "pid": 451879,
+    "executable": "<COLIBRI_LOCAL>/flint-optimization-20261104/vulkan-c/qwen36",
+    "settings": {
+      "COLI_VK_DEV2": "1",
+      "COLI_VULKAN": "1",
+      "COLI_NO_OMP_TUNE": "1",
+      "COLI_CUDA": "0",
+      "COLI_ENGINE": "<COLIBRI_LOCAL>/flint-optimization-20261104/vulkan-c/qwen36",
+      "COLI_VK_DEV": "0",
+      "OMP_NUM_THREADS": "8",
+      "COLI_VK_EXPERTS2": "240",
+      "COLI_VK_TIER_GB": "4.0"
+    }
+  }
+]
