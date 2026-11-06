@@ -1,0 +1,8 @@
+{
+  "profile": "cuda-production",
+  "ui_completion": "complete normal response, no output-limit notice",
+  "practical_accuracy": "FAIL",
+  "material_error": "Claims insulation between GPU heat source and cooler lowers peak temperatures. With a heat-generating chip, added thermal resistance to its cooling path can raise chip temperature.",
+  "other_observation": "Also overgeneralizes that higher density improves insulation.",
+  "scope": "One question, not an overall model accuracy estimate."
+}

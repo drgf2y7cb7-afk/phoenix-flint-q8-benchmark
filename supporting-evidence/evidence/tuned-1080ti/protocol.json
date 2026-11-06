@@ -1,0 +1,38 @@
+{
+  "question": "GPU activity diagnostic 2: Explain how insulation slows heat transfer, using general physical principles in about 250 words. This is a hardware timing check. Do not use tools.",
+  "threads": 8,
+  "temperature": 0,
+  "output_limit": 768,
+  "ctx": 8192,
+  "history": "frozen prior sweep seed, separate fresh copies",
+  "plan": [
+    [
+      "vulkan-matched",
+      "vulkan",
+      1700
+    ],
+    [
+      "vulkan-expanded",
+      "vulkan",
+      null
+    ],
+    [
+      "cuda-matched",
+      "cuda",
+      5.5
+    ],
+    [
+      "cuda-auto",
+      "cuda",
+      "auto"
+    ]
+  ],
+  "prior_reference": "flint-thread-cache-20261104 (1070 tuned), not 80/20 reduced-cache experiment",
+  "limits": "One reasoning sample per arm, repeat winner if useful; different backends/cache can produce different text. No fresh 1070 control after swap. Do not claim full answer or broad accuracy from capped samples.",
+  "observed_vulkan_baseline_slots": [
+    682,
+    1700
+  ],
+  "comparison_caveat": "Prior pre-display run affected by cross-GPU desktop load; compare current requested baseline and expanded budget independently.",
+  "stage": "after fixed Ti desktop, user confirmed idle load resolved"
+}
