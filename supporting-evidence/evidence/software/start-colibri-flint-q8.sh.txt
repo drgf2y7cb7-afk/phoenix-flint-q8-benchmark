@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+# Flint Q8 on the NVMe, using the existing RTX 4060 engine.
+set -euo pipefail
+COLIBRI_LOCAL_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+COLIBRI_MODEL_DIR=<MODEL_DIR>/colibri
+COLIBRI_PORT=<LOCAL_PORT>
+COLIBRI_ACTION=${1:-start}
+if (($#)); then shift; fi
+export CUDA_VISIBLE_DEVICES=<GPU_ID>
+export CUDA_DEVICE_ORDER=PCI_BUS_ID
+export COLI_ENGINE="$COLIBRI_LOCAL_DIR/../colibri/c/qwen36"
+export COLI_SETUP_HOME="$COLIBRI_LOCAL_DIR/state-flint-q8"
+export XDG_CACHE_HOME="$COLIBRI_LOCAL_DIR/cache"
+export COLI_USAGE="$COLI_SETUP_HOME/expert-usage"
+export COLI_VOCAB_USAGE="$COLI_SETUP_HOME/vocab-usage"
+export COLI_CUDA=1 COLI_VULKAN=0 COLI_CUDA_CHAIN=1
+export OMP_NUM_THREADS=8 COLI_NO_OMP_TUNE=1 PYTHONUNBUFFERED=1
+export Q36_MTP=0
+unset QT_HOME QT_LAYER_SPLIT COLI_PLACE COLI_CUDA_CHAIN_MOE
+COLIBRI_CLI="$COLIBRI_LOCAL_DIR/../colibri/c/coli"
+case "$COLIBRI_ACTION" in
+  stop) exec python3 "$COLIBRI_CLI" stop --port "$COLIBRI_PORT" "$@" ;;
+  status) exec curl --fail --silent --show-error --max-time 5 "<LOCAL_ENDPOINT>:$COLIBRI_PORT/health" ;;
+  start|plan) ;;
+  *) echo "Usage: $0 [start [--no-browser] | stop | status | plan]" >&2; exit 2 ;;
+esac
+mountpoint -q <MODEL_NVME> || { echo 'The model NVMe is not mounted.' >&2; exit 1; }
+[[ -r "$COLIBRI_MODEL_DIR/gguf.json" && -r "$COLIBRI_MODEL_DIR/../flint-Q8_0.gguf" ]] || { echo 'Flint Q8 model files are missing.' >&2; exit 1; }
+mkdir -p "$COLI_SETUP_HOME"
+COLIBRI_ARGS=(--model "$COLIBRI_MODEL_DIR" --gpu 0 --auto-tier --ctx 8192
+  --ram 48 --cap 256 --vram 5.0 --no-tune-profile)
+if [[ "$COLIBRI_ACTION" == plan ]]; then
+  exec python3 "$COLIBRI_CLI" plan "${COLIBRI_ARGS[@]}" "$@"
+fi
+python3 - "$COLIBRI_PORT" <<'PY'
+import socket, subprocess, sys
+with socket.socket() as sock:
+    if sock.connect_ex(('<IP_ADDRESS>', int(sys.argv[1]))) == 0:
+        raise SystemExit(f'Port {sys.argv[1]} is already in use; open its Colibri page or stop that profile first.')
+gpu = subprocess.check_output(['nvidia-smi', '-i', '<GPU_ID>',
+    '--query-gpu=name,memory.free', '--format=csv,noheader,nounits'], text=True)
+name, free = gpu.strip().rsplit(',', 1)
+if name.strip() != 'NVIDIA GeForce RTX 4060' or int(free) < 6500:
+    raise SystemExit('This profile requires the RTX 4060 with at least 6500 MiB free.')
+mem = dict(line.split(':', 1) for line in open('/proc/meminfo'))
+if int(mem['MemAvailable'].split()[0]) < 55 * 1024 * 1024:
+    raise SystemExit('This profile requires at least 55 GiB available RAM, including runtime headroom.')
+PY
+echo "Flint Q8 — <LOCAL_ENDPOINT>:$COLIBRI_PORT/ — RTX 4060 + system RAM"
+exec python3 "$COLIBRI_CLI" web "${COLIBRI_ARGS[@]}" --host <IP_ADDRESS> \
+  --port "$COLIBRI_PORT" --ngen 6144 --temp 1 \
+  --model-id flint-40b-q8-nvme "$@"

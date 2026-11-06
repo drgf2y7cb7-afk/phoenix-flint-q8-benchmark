@@ -1,0 +1,50 @@
+{
+  "recorded_at": "2026-11-04T10:54:54.059711-08:00",
+  "model": "Flint 39.8B Q8_0",
+  "model_file": "<MODEL_DIR>/flint-Q8_0.gguf",
+  "download_sha256_verified": true,
+  "engine": "existing Colibri v2.1.0 qwen36 CUDA sm_89",
+  "gpus_used_for_inference": [
+    "RTX 4060"
+  ],
+  "gpu_memory_peak_MiB_total": 6231,
+  "gpu_temperature_peak_C": 58,
+  "engine_rss_peak_GiB": 40.03,
+  "host_available_min_GiB": 25.54,
+  "model_swap_KiB_after_test": 0,
+  "context_tokens": 8192,
+  "response_ceiling_tokens_including_reasoning": 6144,
+  "temperature_in_visible_test": 1.0,
+  "last_sampled_decode_tokens_per_second": 16.259,
+  "prompt_read_seconds": 6.174,
+  "last_sampled_completion_tokens": 3736,
+  "completion_time_seconds_bounds": [
+    235.938,
+    237.988
+  ],
+  "coding_result": {
+    "functional_result": "PASS",
+    "tests_passed": 7,
+    "baseline_failures": 2,
+    "model_patch_changed_semantically": false,
+    "format_observation": "The model supplied a diff fragment, not a complete unified diff with filename and hunk headers. Only formatting/indentation was normalized to apply its exact two-line replacement.",
+    "finish_reason": "stop",
+    "final_answer_words": 234,
+    "reasoning_characters": 14900
+  },
+  "first_attempt": "Stopped at 2048-token output ceiling while reasoning; no final answer. Preserved in first-attempt-export.json.",
+  "scope": "One code-repair problem, attempted once with too small a response budget and repeated in a fresh conversation with a larger budget; not a broad model-quality benchmark or stability soak.",
+  "ollama_version_endpoints_http": {
+    "<LOCAL_PORT>": 200,
+    "<LOCAL_PORT>": 200
+  },
+  "status": "Running, idle, visible Colibri chat at <LOCAL_ENDPOINT>/",
+  "artifacts": [
+    "completed-conversation.json",
+    "flint-code-test.jpg",
+    "flint-test-results.txt",
+    "model-proposed-diff.txt",
+    "final-resource-samples.jsonl",
+    "preservation-after.json"
+  ]
+}

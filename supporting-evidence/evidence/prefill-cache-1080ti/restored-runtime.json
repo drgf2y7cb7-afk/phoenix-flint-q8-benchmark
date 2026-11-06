@@ -1,0 +1,19 @@
+[
+  {
+    "pid": 108477,
+    "args": [
+      "<COLIBRI_LOCAL>/bin/qwen36-cuda-sm61-sm89",
+      "256",
+      ""
+    ],
+    "config": {
+      "HEAT_FILE": "<COLIBRI_LOCAL>/state-flint-q8-cuda-dual/expert-heat.bin",
+      "CUDA_EXPERT_GB": "auto",
+      "COLI_CUDA_CHAIN_MOE": "0",
+      "COLI_SETUP_HOME": "<COLIBRI_LOCAL>/state-flint-q8-cuda-dual",
+      "COLI_NO_OMP_TUNE": "1",
+      "CUDA_VISIBLE_DEVICES": "<GPU_ID>,<GPU_ID>",
+      "OMP_NUM_THREADS": "8"
+    }
+  }
+]

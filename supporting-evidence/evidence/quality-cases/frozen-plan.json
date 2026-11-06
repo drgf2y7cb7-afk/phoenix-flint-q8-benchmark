@@ -1,0 +1,67 @@
+{
+  "created": "2026-11-04T11:01:38.351373-08:00",
+  "model": "flint-40b-q8-nvme",
+  "protocol": "Exact historical user prompts in fresh visible Colibri conversations, original followups in same conversation. One attempt per prompt; no teaching or feedback before completion. Five responses across three cases. Expectations frozen before sending. Historical Lucy comparison, not matched system prompts or current Lucy rerun.",
+  "grading": "Practical correctness and usefulness separate from precision/style. Harmless terminology observations alone do not fail. Fail material contradictions or misleading advice. Do not require extra facts not requested.",
+  "settings": {
+    "temperature": 1.0,
+    "output_limit": 6144,
+    "context": 8192,
+    "reasoning_checkbox": false,
+    "effective_reasoning": "Flint may reason despite UI checkbox off"
+  },
+  "cases": [
+    {
+      "id": "new-cold-object",
+      "prompts": [
+        "An insulated picnic cooler contains ice at 0 C in a 30 C room. It has no powered refrigeration. Explain in two short sentences what the insulation does and whether it can prevent the ice from melting indefinitely. Do not use tools."
+      ],
+      "expected": "Insulation reduces incoming heat and slows melting; finite insulation does not prevent melting indefinitely."
+    },
+    {
+      "id": "insulation",
+      "prompts": [
+        "GPU activity diagnostic 2: Explain how insulation slows heat transfer, using general physical principles in about 250 words. This is a hardware timing check. Do not use tools.",
+        "Summarize your previous explanation in one short sentence."
+      ],
+      "earlier": "Oct 31 f16 final check said insulation keeps hot components cooler; repeated in summary.",
+      "criteria": [
+        "Explain reduced heat transfer, not active cooling or universal cooling of hot components.",
+        "Summary preserves direction and does not add unsupported cooling claims."
+      ],
+      "baseline_ids": [
+        435,
+        436,
+        437,
+        438,
+        439,
+        440
+      ]
+    },
+    {
+      "id": "backup-recovery",
+      "prompts": [
+        "This is a hypothetical troubleshooting exercise. Use the supplied facts; do not inspect or change the real Phoenix system. My photo storage has two disks in a mirror. Every night, another drive is synchronized to it, including deletions; it has no version history. I also have a disconnected backup made last Friday. On Monday I accidentally deleted a family album, and the nightly sync has already copied that deletion. Are the mirror and synchronized drive enough to recover the deleted album? What should I try next, without putting the surviving photos at risk?",
+        "I checked: Friday's disconnected backup does contain the family album. A new folder of Saturday photos is absent from that backup and is also now missing from both current drives. Should I restore the entire Friday backup over the live storage? Tell me what we can recover with confidence and what we cannot promise."
+      ],
+      "criteria": [
+        {
+          "prompt": "This is a hypothetical troubleshooting exercise. Use the supplied facts; do not inspect or change the real Phoenix system. My photo storage has two disks in a mirror. Every night, another drive is synchronized to it, including deletions; it has no version history. I also have a disconnected backup made last Friday. On Monday I accidentally deleted a family album, and the nightly sync has already copied that deletion. Are the mirror and synchronized drive enough to recover the deleted album? What should I try next, without putting the surviving photos at risk?",
+          "pass": "Mirror/sync do not guarantee recovery from replicated deletion; inspect Friday offline backup and recover album if present; protect surviving data, avoid syncing deletion to only backup or destructive full restore. Optional undelete/trash/snapshots conditional, not invented.",
+          "material_fail": "Says mirror or sync necessarily retains deletion history; guarantees undelete; destructive whole-disk restore or sync over only good backup."
+        },
+        {
+          "prompt": "I checked: Friday's disconnected backup does contain the family album. A new folder of Saturday photos is absent from that backup and is also now missing from both current drives. Should I restore the entire Friday backup over the live storage? Tell me what we can recover with confidence and what we cannot promise.",
+          "pass": "Recover known album from verified backup with targeted restore/alternate folder and verify; do not overwrite whole live storage needlessly. Saturday photos cannot be promised; investigate other sources/trash/recovery cautiously; do not claim definitely impossible.",
+          "material_fail": "Claims Friday copy contains later Saturday data; promises recovery without source; directs destructive full restore over surviving newer data."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Small failure-selected sample is not everyday accuracy.",
+    "Lucy uses Heretic GPT-OSS20B with production prompt/memory; Flint uses Colibri without those tools or memory.",
+    "Cooler and insulation errors repeated historically; photo-recovery failure documented once, not established recurring.",
+    "No Lucy production settings or memories will change."
+  ]
+}

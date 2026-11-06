@@ -1,0 +1,5 @@
+User update during this test: GTX 1070 will be replaced later today by GTX 1080 Ti 11 GB. Defer dual-GPU benchmarking until replacement is installed. No GPU changes made during this accuracy comparison.
+
+Installed qwen36 source supports per-component placement COLI_PLACE and layer placement QT_HOME=layer with QT_LAYER_SPLIT. Current production Flint qwen36 binary contains sm_89 kernels only (cuobjdump verified); it is not ready for a Pascal GPU. Existing isolated build-176b-dual/c has dual sm_61/sm_89 CUDA objects; make -n qwen36 shows only the host compile/link is pending, so no new model download or full Colibri rebuild should be needed. This is a build plan, not a tested compatible Flint engine.
+
+Do not assume dual GPUs improve speed. Benchmark identical prompts and generation settings against saved RTX 4060 baseline; consider asymmetric component roles and layer split. Preserve current single-card launcher and Lucy default.

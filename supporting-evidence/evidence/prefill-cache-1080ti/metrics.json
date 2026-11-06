@@ -1,0 +1,61 @@
+[
+  {
+    "profile": "cache-off",
+    "unix": 1793828712.977,
+    "last_sample": {
+      "state": "writing",
+      "elapsed_s": 48.606,
+      "read_s": 1.2,
+      "prompt_tokens": 37,
+      "tokens": 1369,
+      "forwards": 0,
+      "tok_s": 28.873,
+      "tok_s_now": 28.668
+    },
+    "completion_lower_s": 48.7,
+    "completion_upper_s": 49.49,
+    "max_rss_gib": 40.1,
+    "min_available_gib": 30.42,
+    "gpu_last_active": "0, NVIDIA GeForce RTX 4060, 6972, 32, 54, [N/A]\n1, NVIDIA GeForce GTX 1080 Ti, 9564, 21, 54, 70.40"
+  },
+  {
+    "profile": "cache-on",
+    "unix": 1793828870.264,
+    "temperature_verified": 0,
+    "last_sample": {
+      "state": "writing",
+      "elapsed_s": 84.547,
+      "read_s": 1.838,
+      "prompt_tokens": 37,
+      "tokens": 2161,
+      "forwards": 0,
+      "tok_s": 26.122,
+      "tok_s_now": 25.287
+    },
+    "completion_lower_s": 84.6,
+    "completion_upper_s": 85.39,
+    "max_rss_gib": 40.24,
+    "min_available_gib": 30.48,
+    "gpu_last_active": "0, NVIDIA GeForce RTX 4060, 6972, 31, 53, [N/A]\n1, NVIDIA GeForce GTX 1080 Ti, 9475, 17, 54, 69.32"
+  },
+  {
+    "profile": "cache-off-zero",
+    "unix": 1793829016.227,
+    "temperature_verified": 0,
+    "last_sample": {
+      "state": "writing",
+      "elapsed_s": 60.322,
+      "read_s": 1.065,
+      "prompt_tokens": 37,
+      "tokens": 1806,
+      "forwards": 0,
+      "tok_s": 30.463,
+      "tok_s_now": 30.733
+    },
+    "completion_lower_s": 61.15,
+    "completion_upper_s": 61.94,
+    "max_rss_gib": 40.15,
+    "min_available_gib": 31.0,
+    "gpu_last_active": "0, NVIDIA GeForce RTX 4060, 6972, 40, 51, [N/A]\n1, NVIDIA GeForce GTX 1080 Ti, 9502, 22, 55, 69.73"
+  }
+]
