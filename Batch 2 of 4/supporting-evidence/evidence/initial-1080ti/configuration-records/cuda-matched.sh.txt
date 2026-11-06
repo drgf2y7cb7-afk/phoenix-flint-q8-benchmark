@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+# Flint Q8: CUDA on RTX 4060 + GTX 1080 Ti, with persistent expert history.
+set -euo pipefail
+FLINT_LOCAL=<COLIBRI_LOCAL>
+FLINT_MODEL=<MODEL_DIR>/colibri
+FLINT_CLI="$FLINT_LOCAL/../colibri/c/coli"
+FLINT_ACTION=${1:-start}
+if (($#)); then shift; fi
+case "$FLINT_ACTION" in
+  stop) exec python3 "$FLINT_CLI" stop --port <LOCAL_PORT> "$@" ;;
+  status) exec curl --fail --silent --show-error --max-time 5 <LOCAL_ENDPOINT>/health ;;
+  start) ;;
+  *) echo "Usage: $0 [start [--no-browser] | stop | status]" >&2; exit 2 ;;
+esac
+mountpoint -q <MODEL_NVME> || { echo 'The model NVMe is not mounted.' >&2; exit 1; }
+[[ -r "$FLINT_MODEL/gguf.json" && -r "$FLINT_MODEL/../flint-Q8_0.gguf" ]] || { echo 'Flint Q8 model files are missing.' >&2; exit 1; }
+for FLINT_KEY in ${!COLI_@} ${!QT_@} ${!Q36_@} ${!OMP_@} ${!GOMP_@}; do unset "$FLINT_KEY"; done
+unset CUDA_EXPERT_GB CUDA_DENSE HEAT_FILE
+export CUDA_DEVICE_ORDER=PCI_BUS_ID
+export CUDA_VISIBLE_DEVICES=<GPU_ID>,<GPU_ID>
+export COLI_ENGINE="$FLINT_LOCAL/bin/qwen36-cuda-sm61-sm89"
+export COLI_SETUP_HOME=<COLIBRI_LOCAL>/flint-1080ti-20261104/state-cuda-matched
+export XDG_CACHE_HOME="$FLINT_LOCAL/cache"
+export COLI_USAGE="$COLI_SETUP_HOME/expert-usage"
+export COLI_VOCAB_USAGE="$COLI_SETUP_HOME/vocab-usage"
+export HEAT_FILE="$COLI_SETUP_HOME/expert-heat.bin"
+export USAGE_SAVE=1
+export COLI_CUDA=1 COLI_VULKAN=0 Q36_MTP=0
+export COLI_CUDA_CHAIN=1 COLI_CUDA_CHAIN_MOE=0
+export COLI_PLACE=lmhead=0,attnproj=0,shexp=0,experts=all
+export OMP_NUM_THREADS=8 COLI_NO_OMP_TUNE=1 PYTHONUNBUFFERED=1
+[[ -x "$COLI_ENGINE" ]] || { echo 'The verified dual-GPU CUDA engine is missing.' >&2; exit 1; }
+python3 - <<'PY'
+import socket, subprocess, time
+with socket.socket() as sock:
+    if sock.connect_ex(('<IP_ADDRESS>',<LOCAL_PORT>)) == 0:
+        raise SystemExit('Port <LOCAL_PORT> is in use. Open its Colibri page, or stop that profile first.')
+expected=[('<GPU_ID>','NVIDIA GeForce RTX 4060'),
+          ('<GPU_ID>','NVIDIA GeForce GTX 1080 Ti')]
+for attempt in range(20):
+    gpus={}
+    for line in subprocess.check_output(['nvidia-smi','--query-gpu=uuid,name,memory.free','--format=csv,noheader,nounits'],text=True).splitlines():
+        uid,name,free=map(str.strip,line.split(','));gpus[uid]=(name,int(free))
+    for uid,name in expected:
+        if uid not in gpus or gpus[uid][0]!=name:
+            raise SystemExit(f'This profile requires {name}. No other GPU will be substituted.')
+    if all(gpus[uid][1]>=6500 for uid,_ in expected):break
+    if attempt==19:raise SystemExit('Both GPUs need at least 6500 MiB free; another process may still be using them.')
+    if attempt==0:print('Waiting briefly for GPU memory to be released...',flush=True)
+    time.sleep(0.5)
+mem=dict(line.split(':',1) for line in open('/proc/meminfo'))
+if int(mem['MemAvailable'].split()[0])<55*1024*1024:
+    raise SystemExit('This profile requires at least 55 GiB available RAM.')
+PY
+mkdir -p "$COLI_SETUP_HOME"
+if [[ ! -r "$HEAT_FILE" ]]; then
+  cp -- "$COLI_SETUP_HOME/seed-heat.bin" "$HEAT_FILE"
+fi
+echo 'Flint Q8 — <LOCAL_ENDPOINT>/ — CUDA, RTX 4060 + GTX 1080 Ti, 8 CPU threads'
+exec python3 "$FLINT_CLI" web --model "$FLINT_MODEL" --gpu 0,1 --vram 5.5 --auto-tier \
+  --ctx 8192 --ram 48 --cap 256 --no-tune-profile --host <IP_ADDRESS> \
+  --port <LOCAL_PORT> --ngen 768 --temp 0 --model-id flint-40b-q8-nvme "$@"

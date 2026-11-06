@@ -1,0 +1,39 @@
+{
+  "status": "ok",
+  "arch": "qwen36",
+  "scheduler": {
+    "active": 0,
+    "queued": 0,
+    "capacity": 1,
+    "max_queue": 8,
+    "queue_timeout_seconds": 300.0,
+    "admitted": 0,
+    "completed": 0,
+    "failed": 0,
+    "rejected": 0,
+    "timed_out": 0,
+    "cancelled": 0
+  },
+  "engine_restarts": 0,
+  "kv_slots": 1,
+  "input_modalities": [
+    "text"
+  ],
+  "continue_assistant": true,
+  "context_compaction": true,
+  "context_tokens": 4096,
+  "max_tokens": 2048,
+  "capabilities": [
+    "chat",
+    "systemone"
+  ],
+  "live": [],
+  "system": {
+    "ram_total_gb": 78.49,
+    "ram_avail_gb": 23.85,
+    "load1": 2.17,
+    "cores": 16,
+    "engine_rss_gb": 39.73,
+    "engine_threads": 12
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "question": "GPU activity diagnostic 2: Explain how insulation slows heat transfer, using general physical principles in about 250 words. This is a hardware timing check. Do not use tools.",
+  "profiles": [
+    "cache-on",
+    "cache-off-zero"
+  ],
+  "threads": 8,
+  "temperature": 0,
+  "max_tokens": 6144,
+  "ctx": 8192,
+  "CUDA_EXPERT_GB": "auto",
+  "QT_PREFILL_REPLAN_MAX": 24,
+  "COLI_TIMERS": 1,
+  "seed": "identical fresh copies of frozen 1080 Ti experiment history",
+  "comparison": "Full answers at temperature 0; record natural stop/truncation, timing, cache activity and factual accuracy separately. Repeat only for ambiguous result or necessary validation.",
+  "accuracy_standard": "Correct conduction/convection/radiation explanation; fail materially misleading heat-transfer advice, especially claiming insulation in a GPU-to-cooler path lowers chip temperature.",
+  "limitations": "One repeated question, not broad generalization; prior expert history may already favor this prompt.",
+  "excluded_profiles": {
+    "cache-off": "UI range fill changed DOM value but did not update React temperature; displayed setting later remained 0.7. Excluded from the zero-temperature matched comparison."
+  },
+  "ui_temperature_method": "ArrowRight then Home; verify visible text 0.0, not just slider value",
+  "change_log": "Initial baseline excluded after discovering UI fill did not apply temperature. Enabled arm runs first, then fresh baseline. No generation occurred in cache-on before temperature correction."
+}

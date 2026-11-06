@@ -1,0 +1,38 @@
+Browser tab: 5, Title: "colibrì", URL: "<LOCAL_ENDPOINT>/".
+0 AXWebArea colibrì, URL: <IP_ADDRESS>:<LOCAL_PORT>/
+	1 container root
+		2 container Sidebar
+			3 button colibrì
+				4 container colibrì
+			5 button New chat
+			6 button Search conversations
+			7 button Conversations
+			8 button Settings
+			9 button Change theme
+		10 container
+			11 button flint-40b-q8-nvme
+			12 button Engine reachable
+			33 container
+				34 text COLIBRI
+				35 heading Settings, Value: 1
+					36 text Settings
+				37 text Your workspace, model and engine connection.
+			38 container Settings
+				39 button General
+				40 button Model
+				41 button Connection
+				42 button System
+			43 container
+				44 text INFERENCE Model
+				45 pop up button (collapsed, settable) Model, Value: flint-40b-q8-nvme, ID: model-select, Secondary Actions: Expand
+					46 menu
+						47 (selected) flint-40b-q8-nvme
+				48 text Temperature
+				49 text 1.0
+				50 slider (settable, integer) Temperature 1.0, Value: 1, ID: temperature
+				51 text Max output tokens
+				52 stepper (settable, integer) Max output tokens, Value: 6144, ID: max-tokens
+				53 checkbox Reasoning, Value: 0
+		32 button (collapsed) Description: Chat, Brain and Profiling, Secondary Actions: Expand
+
+The focused UI element is 40 button Model

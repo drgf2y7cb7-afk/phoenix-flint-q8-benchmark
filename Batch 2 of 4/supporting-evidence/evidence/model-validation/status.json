@@ -1,0 +1,14 @@
+{
+  "phase": "complete",
+  "updated_at": 1793817567.6183968,
+  "worker_pid": 122826,
+  "repository": "unsloth/flint-GGUF",
+  "revision": "20468edfc38ab43d6914cc88b08cbecb05d0fc62",
+  "destination": "<MODEL_DIR>/flint-Q8_0.gguf",
+  "expected_bytes": 42301076928,
+  "expected_sha256": "5df42b56859c7b5142228005d7d63c327ec9e34c99c72548016d805309a0d284",
+  "verified_bytes": 42301076928,
+  "verified_sha256": "5df42b56859c7b5142228005d7d63c327ec9e34c99c72548016d805309a0d284",
+  "colibri_header_check": "PASS",
+  "inference_started": false
+}
