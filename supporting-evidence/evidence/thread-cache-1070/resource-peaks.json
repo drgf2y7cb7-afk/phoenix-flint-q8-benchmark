@@ -1,0 +1,197 @@
+{
+  "t8-v3-r1": {
+    "gpu": {
+      "NVIDIA GeForce RTX 4060": {
+        "max_memory_mib": 5193,
+        "max_util_percent": 73,
+        "max_temperature_c": 49
+      },
+      "NVIDIA GeForce GTX 1070": {
+        "max_memory_mib": 7045,
+        "max_util_percent": 62,
+        "max_temperature_c": 57
+      }
+    },
+    "active_interval_samples": 50
+  },
+  "t4-v3-r1": {
+    "gpu": {
+      "NVIDIA GeForce RTX 4060": {
+        "max_memory_mib": 5193,
+        "max_util_percent": 59,
+        "max_temperature_c": 52
+      },
+      "NVIDIA GeForce GTX 1070": {
+        "max_memory_mib": 7047,
+        "max_util_percent": 89,
+        "max_temperature_c": 55
+      }
+    },
+    "active_interval_samples": 54
+  },
+  "t6-v3-r1": {
+    "gpu": {
+      "NVIDIA GeForce RTX 4060": {
+        "max_memory_mib": 5193,
+        "max_util_percent": 59,
+        "max_temperature_c": 54
+      },
+      "NVIDIA GeForce GTX 1070": {
+        "max_memory_mib": 7055,
+        "max_util_percent": 72,
+        "max_temperature_c": 56
+      }
+    },
+    "active_interval_samples": 52
+  },
+  "t8-v3-r2": {
+    "gpu": {
+      "NVIDIA GeForce RTX 4060": {
+        "max_memory_mib": 5193,
+        "max_util_percent": 55,
+        "max_temperature_c": 55
+      },
+      "NVIDIA GeForce GTX 1070": {
+        "max_memory_mib": 7023,
+        "max_util_percent": 78,
+        "max_temperature_c": 56
+      }
+    },
+    "active_interval_samples": 52
+  },
+  "t8-v35-r1": {
+    "gpu": {
+      "NVIDIA GeForce RTX 4060": {
+        "max_memory_mib": 5705,
+        "max_util_percent": 50,
+        "max_temperature_c": 56
+      },
+      "NVIDIA GeForce GTX 1070": {
+        "max_memory_mib": 7023,
+        "max_util_percent": 87,
+        "max_temperature_c": 56
+      }
+    },
+    "active_interval_samples": 53
+  },
+  "t8-v4-r1": {
+    "gpu": {
+      "NVIDIA GeForce RTX 4060": {
+        "max_memory_mib": 6216,
+        "max_util_percent": 54,
+        "max_temperature_c": 58
+      },
+      "NVIDIA GeForce GTX 1070": {
+        "max_memory_mib": 7000,
+        "max_util_percent": 76,
+        "max_temperature_c": 56
+      }
+    },
+    "active_interval_samples": 48
+  },
+  "c8-v5-r1": {
+    "gpu": {
+      "NVIDIA GeForce RTX 4060": {
+        "max_memory_mib": 5913,
+        "max_util_percent": 43,
+        "max_temperature_c": 56
+      },
+      "NVIDIA GeForce GTX 1070": {
+        "max_memory_mib": 6300,
+        "max_util_percent": 34,
+        "max_temperature_c": 52
+      }
+    },
+    "active_interval_samples": 40
+  },
+  "c4-v5-r1": {
+    "gpu": {
+      "NVIDIA GeForce RTX 4060": {
+        "max_memory_mib": 5913,
+        "max_util_percent": 45,
+        "max_temperature_c": 58
+      },
+      "NVIDIA GeForce GTX 1070": {
+        "max_memory_mib": 6322,
+        "max_util_percent": 35,
+        "max_temperature_c": 53
+      }
+    },
+    "active_interval_samples": 41
+  },
+  "c6-v5-r1": {
+    "gpu": {
+      "NVIDIA GeForce RTX 4060": {
+        "max_memory_mib": 5913,
+        "max_util_percent": 37,
+        "max_temperature_c": 46
+      },
+      "NVIDIA GeForce GTX 1070": {
+        "max_memory_mib": 6314,
+        "max_util_percent": 36,
+        "max_temperature_c": 53
+      }
+    },
+    "active_interval_samples": 41
+  },
+  "c8-v5-r2": {
+    "gpu": {
+      "NVIDIA GeForce RTX 4060": {
+        "max_memory_mib": 5913,
+        "max_util_percent": 41,
+        "max_temperature_c": 52
+      },
+      "NVIDIA GeForce GTX 1070": {
+        "max_memory_mib": 6345,
+        "max_util_percent": 34,
+        "max_temperature_c": 54
+      }
+    },
+    "active_interval_samples": 41
+  },
+  "c8-v55-r1": {
+    "gpu": {
+      "NVIDIA GeForce RTX 4060": {
+        "max_memory_mib": 6425,
+        "max_util_percent": 41,
+        "max_temperature_c": 55
+      },
+      "NVIDIA GeForce GTX 1070": {
+        "max_memory_mib": 6863,
+        "max_util_percent": 34,
+        "max_temperature_c": 54
+      }
+    },
+    "active_interval_samples": 39
+  },
+  "c8-v55-r2": {
+    "gpu": {
+      "NVIDIA GeForce RTX 4060": {
+        "max_memory_mib": 6425,
+        "max_util_percent": 42,
+        "max_temperature_c": 53
+      },
+      "NVIDIA GeForce GTX 1070": {
+        "max_memory_mib": 6853,
+        "max_util_percent": 34,
+        "max_temperature_c": 53
+      }
+    },
+    "active_interval_samples": 39
+  },
+  "cuda-final-full": {
+    "gpu": {
+      "NVIDIA GeForce RTX 4060": {
+        "max_memory_mib": 6621,
+        "max_util_percent": 42,
+        "max_temperature_c": 58
+      },
+      "NVIDIA GeForce GTX 1070": {
+        "max_memory_mib": 6884,
+        "max_util_percent": 36,
+        "max_temperature_c": 54
+      }
+    },
+    "active_interval_samples": 112
+  }
+}

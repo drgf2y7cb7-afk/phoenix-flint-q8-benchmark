@@ -1,0 +1,11 @@
+{
+  "profile": "cuda-final-full",
+  "completion": "PASS: normal stop, visible answer and saved export",
+  "practical_correctness": "FAIL",
+  "reason": "The final paragraph implies insulating GPU components or the heatsink/chassis heat path helps maintain lower component temperatures. For internally heat-generating components, impeding the cooling heat path can raise temperature; shielding from an external heat source is a different case. This is a materially misleading application, not a penalty for terminology or formatting.",
+  "sample_size": 1,
+  "final_words": 242,
+  "reasoning_characters": 8979,
+  "reasoning_emitted": true,
+  "finish": "stop"
+}

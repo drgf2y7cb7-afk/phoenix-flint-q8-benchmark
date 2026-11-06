@@ -1,0 +1,7 @@
+{
+  "threads": 4,
+  "primary_cache_gib": 3.0,
+  "second_expert_cap": 1700,
+  "usage_save": 0,
+  "seed": "<COLIBRI_LOCAL>/flint-thread-cache-20261104/frozen-expert-usage"
+}

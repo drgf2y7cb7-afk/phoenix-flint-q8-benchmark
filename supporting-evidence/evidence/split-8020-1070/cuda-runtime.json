@@ -1,0 +1,20 @@
+[
+  {
+    "pid": 460498,
+    "executable": "<COLIBRI_LOCAL>/flint-split-8020-20261104/build/qwen36-8020",
+    "settings": {
+      "HEAT_FILE": "<COLIBRI_LOCAL>/flint-split-8020-20261104/state-cuda/expert-heat.bin",
+      "COLI_PLACE": "lmhead=0,attnproj=0,shexp=0,experts=all",
+      "COLI_CUDA_CHAIN_MOE": "0",
+      "COLI_CUDA_CHAIN": "1",
+      "COLI_VULKAN": "0",
+      "COLI_NO_OMP_TUNE": "1",
+      "COLI_CUDA": "1",
+      "COLI_ENGINE": "<COLIBRI_LOCAL>/flint-split-8020-20261104/build/qwen36-8020",
+      "OMP_NUM_THREADS": "8",
+      "QT_TEST_8020": "1",
+      "COLI_GPUS": "0,1",
+      "CUDA_EXPERT_GB": "5.5"
+    }
+  }
+]
