@@ -1,6 +1,0 @@
-{"profile":"cuda-matched","unix":1793827442.774,"max_tokens":768,"temperature":0}
-{"profile":"cuda-clean","unix":1793827641.674,"max_tokens":768,"temperature":0}
-{"profile":"cuda-auto","unix":1793827756.853,"max_tokens":768,"temperature":0}
-{"profile":"vulkan-matched","unix":1793827887.158,"max_tokens":768,"temperature":0}
-{"profile":"vulkan-expanded","unix":1793827996.963,"max_tokens":768,"temperature":0}
-{"profile":"cuda-production","unix":1793828114.065,"max_tokens":6144,"temperature":1}

@@ -1,5 +1,0 @@
-         finally:
-              async with self._lock:
--                 self._flights.pop(key, None)
-+                 if self._epochs.get(key, 0) == epoch:
-+                     self._flights.pop(key, None)

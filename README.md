@@ -4,7 +4,7 @@
 
 Local AI inference, hardware optimization, offline AI infrastructure and practical model evaluation.
 
-**Release package v5 - November 5, 2026. Public release approved; not yet published.**
+**Release package v5 - November 5, 2026. Publicly available on GitHub.**
 
 ## System and model
 
@@ -50,7 +50,7 @@ The first command requires the baseline's two failures and both patched 7/7 resu
 | `TECHNICAL-REPORT.md`, `output/pdf/technical-report.pdf` | Four-page methodology, results and limitations |
 | `supporting-evidence/` | Unchanged 308-file sanitized evidence package, including original detailed reports |
 | `tools/`, `validation/` | Offline coding runner, saved command outputs and release audit |
-| `announcements/` | GitHub/Colibri drafts; factual Reddit/HN briefs for the author |
+| `announcements/` | Release notes for review and archived community material; Reddit/HN plans canceled |
 | `licenses/`, `THIRD-PARTY-NOTICES.md` | Applicable upstream notices and scope |
 | `governance/`, `RELEASE-CHECKLIST.md` | Contact, Git identity and approval decisions |
 
@@ -58,6 +58,6 @@ Credit to Colibri's developers, including Vincenzo Fornaro, Recursive for Flint,
 
 **Licenses selected by Jaime:** CC BY 4.0 for the original research documentation and MIT for the original benchmark scripts explicitly listed in the license scope. Third-party material keeps its existing terms; raw evidence and model-generated code are not blanket-relicensed. [Licensing and rights scope](LICENSING.md) | [Third-party inventory](THIRD-PARTY-NOTICES.md).
 
-**Public benchmark contact:** [jmlawson@outlook.com](mailto:jmlawson@outlook.com). Jaime expressly approved this address for public benchmark inquiries. [Contact scope](governance/CONTACT.md). Announcement links use the explicit `REPOSITORY_URL_PENDING` placeholder until the repository exists and its URL is approved. [Release checklist](RELEASE-CHECKLIST.md) | [Current release audit](validation/V5-AUDIT.md).
+**Public benchmark contact:** [jmlawson@outlook.com](mailto:jmlawson@outlook.com). Jaime expressly approved this address for public benchmark inquiries. [Contact scope](governance/CONTACT.md). The [public repository](https://github.com/drgf2y7cb7-afk/phoenix-flint-q8-benchmark) and [Colibri announcement](https://github.com/JustVugg/colibri/discussions/208#discussioncomment-19445667) are available. A separate GitHub Release has not been published. [Release checklist](RELEASE-CHECKLIST.md) | [Current release audit](validation/V5-AUDIT.md).
 
-The material inside `supporting-evidence/` is an immutable prior review snapshot. Its historical publication text is retained as evidence; use this root README and `announcements/` for the current release. The historical records retain earlier review status; [LICENSING.md](LICENSING.md) records the licenses now selected.
+The material inside `supporting-evidence/` is an immutable prior review snapshot. Its historical publication text is retained as evidence. The original November 5 PDFs also remain unchanged, including their then-current publication-status text and metadata. Use this root README and the release checklist for current publication status. The historical records retain earlier review status; [LICENSING.md](LICENSING.md) records the licenses now selected.

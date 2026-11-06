@@ -1,4 +1,6 @@
-# Draft Colibri GitHub Discussion
+# Archived Colibri announcement preparation
+
+The [Colibri announcement](https://github.com/JustVugg/colibri/discussions/208#discussioncomment-19445667) is already published. This reference copy is not a request to repost.
 
 **Title:** Flint Q8 measurements on RTX 4060 + GTX 1080 Ti, with reproducible evidence
 
@@ -16,6 +18,6 @@ Thanks to Colibri's developers, including Vincenzo Fornaro, and to Recursive and
 
 **Public benchmark contact:** [jmlawson@outlook.com](mailto:jmlawson@outlook.com)
 
-[Repository (URL pending)](REPOSITORY_URL_PENDING)
+[Repository](https://github.com/drgf2y7cb7-afk/phoenix-flint-q8-benchmark)
 
-Publication approved by Jaime. Original research documentation: CC BY 4.0; original publication scripts: MIT. Preserve the third-party notices and historical-evidence qualifications in LICENSING.md; replace the repository URL placeholder before posting.
+Publication approved by Jaime. Original research documentation: CC BY 4.0; original publication scripts: MIT. Preserve the third-party notices and historical-evidence qualifications in [LICENSING.md](../LICENSING.md).

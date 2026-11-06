@@ -1,5 +1,7 @@
 # Hacker News - factual briefing for Jaime
 
+**Archived reference only. Jaime canceled this publication plan; there is no pending submission or posting task.**
+
 **Preparation notes only; not a submission or comment draft.** Jaime must write any submission himself. [Hacker News guidelines](https://news.ycombinator.com/newsguidelines.html) prohibit generated or AI-edited submission/comment text. Do not use these notes as a ready-to-post paragraph, and do not automate posting.
 
 ## Source facts for the author
@@ -19,6 +21,6 @@
 | Limits | Small dependent task set; uncontrolled cold cache; changing output lengths; early temperature caveat; no general accuracy claim |
 | Assistance | Codex/Sapphire assisted organization, verification and drafting; not independent replication |
 
-Source material: [summary](../PUBLIC-SUMMARY.md), [technical report](../TECHNICAL-REPORT.md), [test record](../validation/VERIFICATION.md), [credits](../CREDITS.md). Future public destination: [Repository (URL pending)](REPOSITORY_URL_PENDING).
+Source material: [summary](../PUBLIC-SUMMARY.md), [technical report](../TECHNICAL-REPORT.md), [test record](../validation/VERIFICATION.md), [credits](../CREDITS.md). Public repository: [Repository](https://github.com/drgf2y7cb7-afk/phoenix-flint-q8-benchmark).
 
 Author tasks: choose the relevant findings, check source context, describe the work in your own words, verify the final public repository link and current community rules, and retain the already recorded release approval. No title, submission paragraph or comment is supplied for copying into this community.

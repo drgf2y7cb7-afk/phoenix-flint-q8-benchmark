@@ -1,7 +1,0 @@
-GGUF CHECK OK: <MODEL_DIR>/flint-Q8_0.gguf | 49 layers, 256 experts top-6 | 779 tensors, 42.30 GB of weights | tokenizer ok
-
-[OMP] qwen36: hot-thread tuning, re-exec once (COLI_NO_OMP_TUNE=1 to skip)
-[gguf] flint: 35 sliding-window layers of 513 rows, 14 without RoPE, 2 dense in front (MLP 6144), sigmoid routing, a sink per head
-[gguf] flint: 49 layers (all attention), hidden 2048, 256 experts top-6, inter 512, vocab 150144
-[gguf] experts: layer 2 gate Q8_0 up Q8_0 down Q8_0, 3.19 MB per expert at most; held interleaved by 16 for the CPU (Q36_ILV16=0 keeps the rows)
-[tok] loaded 150144 pieces, 149744 merges, 144 added tokens from the GGUF

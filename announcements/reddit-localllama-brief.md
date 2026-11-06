@@ -1,5 +1,7 @@
 # r/LocalLLaMA - factual briefing for Jaime
 
+**Archived reference only. Jaime canceled this publication plan; there is no pending submission or posting task.**
+
 **Preparation notes only; not a post draft.** Per the requested restriction on primarily AI-generated posts, Jaime must write the submission himself. Check the [current r/LocalLLaMA rules](https://www.reddit.com/r/LocalLLaMA/about/rules/) before posting; no automated submission is authorized.
 
 ## Source facts for the author
@@ -19,6 +21,6 @@
 | Limits | Small dependent task set; uncontrolled cold cache; changing output lengths; early temperature caveat; no general accuracy claim |
 | Assistance | Codex/Sapphire assisted organization, verification and drafting; not independent replication |
 
-Source material: [summary](../PUBLIC-SUMMARY.md), [technical report](../TECHNICAL-REPORT.md), [test record](../validation/VERIFICATION.md), [credits](../CREDITS.md). Future public destination: [Repository (URL pending)](REPOSITORY_URL_PENDING).
+Source material: [summary](../PUBLIC-SUMMARY.md), [technical report](../TECHNICAL-REPORT.md), [test record](../validation/VERIFICATION.md), [credits](../CREDITS.md). Public repository: [Repository](https://github.com/drgf2y7cb7-afk/phoenix-flint-q8-benchmark).
 
 Author tasks: choose the relevant findings, check source context, describe the work in your own words, verify the final public repository link and current community rules, and retain the already recorded release approval. No title, submission paragraph or comment is supplied for copying into this community.

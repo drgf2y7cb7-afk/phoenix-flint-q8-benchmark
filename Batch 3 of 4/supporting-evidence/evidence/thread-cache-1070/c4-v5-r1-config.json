@@ -1,6 +1,0 @@
-{
-  "backend": "CUDA",
-  "threads": 4,
-  "per_card_dense_plus_expert_allowance_gib": 5.0,
-  "heat_seed": "<COLIBRI_LOCAL>/flint-thread-cache-20261104/frozen-cuda-heat.bin"
-}

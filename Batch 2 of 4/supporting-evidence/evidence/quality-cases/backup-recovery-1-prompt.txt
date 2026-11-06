@@ -1,1 +1,0 @@
-I checked: Friday's disconnected backup does contain the family album. A new folder of Saturday photos is absent from that backup and is also now missing from both current drives. Should I restore the entire Friday backup over the live storage? Tell me what we can recover with confidence and what we cannot promise.

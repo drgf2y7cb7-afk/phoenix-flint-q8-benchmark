@@ -6,7 +6,7 @@
 
 Local AI inference, hardware optimization, offline AI infrastructure and practical model evaluation.
 
-**Release package v5 - November 5, 2026. Public release approved; not yet published.**
+**Release package v5 - November 5, 2026. Publicly available on GitHub.**
 
 ## System and model
 

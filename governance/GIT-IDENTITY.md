@@ -1,5 +1,11 @@
 # Git attribution and email privacy
 
+## Current publication status (November 6, 2026)
+
+The repository is public under the verified `drgf2y7cb7-afk` account. Its published commits use GitHub-managed attribution with an account-specific noreply address. Repository housekeeping does not configure a local or global Git email or substitute the public benchmark contact. Local commits in future still require a verified account-specific noreply identity.
+
+## Historical package-preparation record (November 5, 2026)
+
 Approved author: **Jaime Lawson**, Founder & Research Lead, Phoenix Applied Technologies.
 
 The earlier v3 candidate has a local-only staging repository; the v4 contact and v5 license updates did not initialize another repository or change Git settings. Its local `user.name` is `Jaime Lawson` and local `user.useConfigOnly` is `true`. No email is configured, so Git cannot currently produce a complete author identity. No commits, remotes or public repository were created. Global Git identity was not changed. The downloadable ZIP excludes `.git`; these local settings therefore do not travel with the archive.

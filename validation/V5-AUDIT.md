@@ -1,5 +1,19 @@
 # V5 release audit
 
+## Publication cleanup update (November 6, 2026)
+
+The approved v5 package is [published](https://github.com/drgf2y7cb7-afk/phoenix-flint-q8-benchmark), and the [Colibri announcement](https://github.com/JustVugg/colibri/discussions/208#discussioncomment-19445667) is live. This update supersedes the publication-pending wording in the historical packaging audit below. Reddit and Hacker News plans are canceled. No new GitHub Release, tag or announcement was published.
+
+Before cleanup, all 363 canonical files matched the approved original ZIP and the live Git tree at `fcb66fd2470cd934c2dd351db90fc46e58024173`. All 212 files in the three Batch folders were exact redundant copies: 98 in Batch 2, 81 in Batch 3 and 33 in Batch 4. SHA-256 values matched their canonical files, and both paths referenced the same Git blobs. No unique evidence or documentation was present. Only those redundant folders were removed.
+
+All 308 canonical evidence files, both original PDFs, the technical report, verification scripts, attribution and license notices remain unchanged. All seven offline commands reproduced their expected outcomes: baseline 5 pass / 2 fail, both fixes 7/7, evidence check 401 checks / 40 rows, regeneration 398 checks. These are replay checks, not independent replication or new inference.
+
+Current README/summary and announcement links are corrected. The file-by-file license scope retains the same paths and treatments; only hashes for edited documentation were refreshed. Root SHA-256 checksums were refreshed accordingly. The original v5 ZIP hash remains `ddc0742cc55215dbc22fa25c49134bf1539c2316432ddbed7f343c06d707e779`. Original PDFs retain their historical status text/metadata and remain one and four pages.
+
+[Release checklist](../RELEASE-CHECKLIST.md) records the current state. [Draft v5.0 release notes](../announcements/github-release.md) identify the existing reports and verified candidate ZIP for owner review. The machine-readable audit below is the historical November 5 packaging record, not a report of current publication status.
+
+## Historical packaging audit (November 5, 2026)
+
 Jaime approved public release of the verified v4 package and selected CC BY 4.0 for original research documentation and MIT for original benchmark scripts. This fresh v5 copy applies only those scoped licensing and publication-status changes. It preserves the approved public identity and contact. Nothing was published to GitHub from this executor.
 
 ## Evidence, results and tests

@@ -1,7 +1,0 @@
-{
-  "backend": "CUDA",
-  "threads": 8,
-  "per_card_dense_plus_expert_allowance_gib": 5.5,
-  "production_launcher": "<COLIBRI_LOCAL>/start-colibri-flint-q8-cuda-dual.sh",
-  "initial_heat": "Identical frozen source counts; production launcher saves at shutdown"
-}
